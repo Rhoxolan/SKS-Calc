@@ -31,7 +31,15 @@
             this.labelMinPermamentLink = new System.Windows.Forms.Label();
             this.numericUpDownMinPermamentLink = new System.Windows.Forms.NumericUpDown();
             this.labelMaxPermamentLink = new System.Windows.Forms.Label();
+            this.numericUpDownMaxPermamentLink = new System.Windows.Forms.NumericUpDown();
+            this.labelNumberOfWorkplaces = new System.Windows.Forms.Label();
+            this.numericUpDownNumberOfWorkplaces = new System.Windows.Forms.NumericUpDown();
+            this.labelNumberOfPorts = new System.Windows.Forms.Label();
+            this.numericUpDownNumberOfPorts = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfWorkplaces)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfPorts)).BeginInit();
             this.SuspendLayout();
             // 
             // labelMinPermamentLink
@@ -63,7 +71,7 @@
             1,
             0,
             0,
-            131072});
+            0});
             // 
             // labelMaxPermamentLink
             // 
@@ -74,16 +82,108 @@
             this.labelMaxPermamentLink.TabIndex = 2;
             this.labelMaxPermamentLink.Text = "Наибольшая длина постоянного линка:";
             // 
+            // numericUpDownMaxPermamentLink
+            // 
+            this.numericUpDownMaxPermamentLink.Location = new System.Drawing.Point(3, 62);
+            this.numericUpDownMaxPermamentLink.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownMaxPermamentLink.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownMaxPermamentLink.Name = "numericUpDownMaxPermamentLink";
+            this.numericUpDownMaxPermamentLink.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownMaxPermamentLink.TabIndex = 3;
+            this.numericUpDownMaxPermamentLink.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // labelNumberOfWorkplaces
+            // 
+            this.labelNumberOfWorkplaces.AutoSize = true;
+            this.labelNumberOfWorkplaces.Location = new System.Drawing.Point(4, 88);
+            this.labelNumberOfWorkplaces.Name = "labelNumberOfWorkplaces";
+            this.labelNumberOfWorkplaces.Size = new System.Drawing.Size(154, 15);
+            this.labelNumberOfWorkplaces.TabIndex = 4;
+            this.labelNumberOfWorkplaces.Text = "Количество рабочих мест:";
+            // 
+            // numericUpDownNumberOfWorkplaces
+            // 
+            this.numericUpDownNumberOfWorkplaces.Location = new System.Drawing.Point(4, 106);
+            this.numericUpDownNumberOfWorkplaces.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDownNumberOfWorkplaces.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownNumberOfWorkplaces.Name = "numericUpDownNumberOfWorkplaces";
+            this.numericUpDownNumberOfWorkplaces.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownNumberOfWorkplaces.TabIndex = 5;
+            this.numericUpDownNumberOfWorkplaces.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // labelNumberOfPorts
+            // 
+            this.labelNumberOfPorts.AutoSize = true;
+            this.labelNumberOfPorts.Location = new System.Drawing.Point(4, 132);
+            this.labelNumberOfPorts.Name = "labelNumberOfPorts";
+            this.labelNumberOfPorts.Size = new System.Drawing.Size(227, 15);
+            this.labelNumberOfPorts.TabIndex = 6;
+            this.labelNumberOfPorts.Text = "Количество портов на 1 рабочее место:";
+            // 
+            // numericUpDownNumberOfPorts
+            // 
+            this.numericUpDownNumberOfPorts.Location = new System.Drawing.Point(4, 150);
+            this.numericUpDownNumberOfPorts.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownNumberOfPorts.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownNumberOfPorts.Name = "numericUpDownNumberOfPorts";
+            this.numericUpDownNumberOfPorts.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownNumberOfPorts.TabIndex = 7;
+            this.numericUpDownNumberOfPorts.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // CalculateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.numericUpDownNumberOfPorts);
+            this.Controls.Add(this.labelNumberOfPorts);
+            this.Controls.Add(this.numericUpDownNumberOfWorkplaces);
+            this.Controls.Add(this.labelNumberOfWorkplaces);
+            this.Controls.Add(this.numericUpDownMaxPermamentLink);
             this.Controls.Add(this.labelMaxPermamentLink);
             this.Controls.Add(this.numericUpDownMinPermamentLink);
             this.Controls.Add(this.labelMinPermamentLink);
             this.Name = "CalculateControl";
             this.Size = new System.Drawing.Size(616, 395);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfWorkplaces)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfPorts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,5 +194,10 @@
         private Label labelMinPermamentLink;
         private NumericUpDown numericUpDownMinPermamentLink;
         private Label labelMaxPermamentLink;
+        private NumericUpDown numericUpDownMaxPermamentLink;
+        private Label labelNumberOfWorkplaces;
+        private NumericUpDown numericUpDownNumberOfWorkplaces;
+        private Label labelNumberOfPorts;
+        private NumericUpDown numericUpDownNumberOfPorts;
     }
 }
