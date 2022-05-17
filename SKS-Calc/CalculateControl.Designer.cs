@@ -30,6 +30,7 @@
         {
             this.labelMinPermamentLink = new System.Windows.Forms.Label();
             this.numericUpDownMinPermamentLink = new System.Windows.Forms.NumericUpDown();
+            this.labelMaxPermamentLink = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,14 +46,39 @@
             // numericUpDownMinPermamentLink
             // 
             this.numericUpDownMinPermamentLink.Location = new System.Drawing.Point(3, 18);
+            this.numericUpDownMinPermamentLink.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownMinPermamentLink.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
             this.numericUpDownMinPermamentLink.Name = "numericUpDownMinPermamentLink";
             this.numericUpDownMinPermamentLink.Size = new System.Drawing.Size(120, 23);
             this.numericUpDownMinPermamentLink.TabIndex = 1;
+            this.numericUpDownMinPermamentLink.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            // 
+            // labelMaxPermamentLink
+            // 
+            this.labelMaxPermamentLink.AutoSize = true;
+            this.labelMaxPermamentLink.Location = new System.Drawing.Point(3, 44);
+            this.labelMaxPermamentLink.Name = "labelMaxPermamentLink";
+            this.labelMaxPermamentLink.Size = new System.Drawing.Size(228, 15);
+            this.labelMaxPermamentLink.TabIndex = 2;
+            this.labelMaxPermamentLink.Text = "Наибольшая длина постоянного линка:";
             // 
             // CalculateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelMaxPermamentLink);
             this.Controls.Add(this.numericUpDownMinPermamentLink);
             this.Controls.Add(this.labelMinPermamentLink);
             this.Name = "CalculateControl";
@@ -67,5 +93,6 @@
 
         private Label labelMinPermamentLink;
         private NumericUpDown numericUpDownMinPermamentLink;
+        private Label labelMaxPermamentLink;
     }
 }
