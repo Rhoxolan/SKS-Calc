@@ -36,10 +36,16 @@
             this.numericUpDownNumberOfWorkplaces = new System.Windows.Forms.NumericUpDown();
             this.labelNumberOfPorts = new System.Windows.Forms.Label();
             this.numericUpDownNumberOfPorts = new System.Windows.Forms.NumericUpDown();
+            this.labelMeters1 = new System.Windows.Forms.Label();
+            this.labelMeters2 = new System.Windows.Forms.Label();
+            this.checkBoxCableHankMeterage = new System.Windows.Forms.CheckBox();
+            this.numericUpDownCableHankMeterage = new System.Windows.Forms.NumericUpDown();
+            this.labelMeters3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfWorkplaces)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfPorts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCableHankMeterage)).BeginInit();
             this.SuspendLayout();
             // 
             // labelMinPermamentLink
@@ -53,6 +59,7 @@
             // 
             // numericUpDownMinPermamentLink
             // 
+            this.numericUpDownMinPermamentLink.DecimalPlaces = 2;
             this.numericUpDownMinPermamentLink.Location = new System.Drawing.Point(3, 18);
             this.numericUpDownMinPermamentLink.Maximum = new decimal(new int[] {
             1000,
@@ -84,6 +91,7 @@
             // 
             // numericUpDownMaxPermamentLink
             // 
+            this.numericUpDownMaxPermamentLink.DecimalPlaces = 2;
             this.numericUpDownMaxPermamentLink.Location = new System.Drawing.Point(3, 62);
             this.numericUpDownMaxPermamentLink.Maximum = new decimal(new int[] {
             1000,
@@ -107,7 +115,7 @@
             // labelNumberOfWorkplaces
             // 
             this.labelNumberOfWorkplaces.AutoSize = true;
-            this.labelNumberOfWorkplaces.Location = new System.Drawing.Point(4, 88);
+            this.labelNumberOfWorkplaces.Location = new System.Drawing.Point(3, 88);
             this.labelNumberOfWorkplaces.Name = "labelNumberOfWorkplaces";
             this.labelNumberOfWorkplaces.Size = new System.Drawing.Size(154, 15);
             this.labelNumberOfWorkplaces.TabIndex = 4;
@@ -115,7 +123,7 @@
             // 
             // numericUpDownNumberOfWorkplaces
             // 
-            this.numericUpDownNumberOfWorkplaces.Location = new System.Drawing.Point(4, 106);
+            this.numericUpDownNumberOfWorkplaces.Location = new System.Drawing.Point(3, 106);
             this.numericUpDownNumberOfWorkplaces.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -138,7 +146,7 @@
             // labelNumberOfPorts
             // 
             this.labelNumberOfPorts.AutoSize = true;
-            this.labelNumberOfPorts.Location = new System.Drawing.Point(4, 132);
+            this.labelNumberOfPorts.Location = new System.Drawing.Point(3, 132);
             this.labelNumberOfPorts.Name = "labelNumberOfPorts";
             this.labelNumberOfPorts.Size = new System.Drawing.Size(227, 15);
             this.labelNumberOfPorts.TabIndex = 6;
@@ -146,7 +154,7 @@
             // 
             // numericUpDownNumberOfPorts
             // 
-            this.numericUpDownNumberOfPorts.Location = new System.Drawing.Point(4, 150);
+            this.numericUpDownNumberOfPorts.Location = new System.Drawing.Point(3, 150);
             this.numericUpDownNumberOfPorts.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -166,10 +174,76 @@
             0,
             0});
             // 
+            // labelMeters1
+            // 
+            this.labelMeters1.AutoSize = true;
+            this.labelMeters1.Location = new System.Drawing.Point(129, 26);
+            this.labelMeters1.Name = "labelMeters1";
+            this.labelMeters1.Size = new System.Drawing.Size(19, 15);
+            this.labelMeters1.TabIndex = 8;
+            this.labelMeters1.Text = "м.";
+            // 
+            // labelMeters2
+            // 
+            this.labelMeters2.AutoSize = true;
+            this.labelMeters2.Location = new System.Drawing.Point(129, 70);
+            this.labelMeters2.Name = "labelMeters2";
+            this.labelMeters2.Size = new System.Drawing.Size(19, 15);
+            this.labelMeters2.TabIndex = 9;
+            this.labelMeters2.Text = "м.";
+            // 
+            // checkBoxCableHankMeterage
+            // 
+            this.checkBoxCableHankMeterage.AutoSize = true;
+            this.checkBoxCableHankMeterage.Location = new System.Drawing.Point(3, 179);
+            this.checkBoxCableHankMeterage.Name = "checkBoxCableHankMeterage";
+            this.checkBoxCableHankMeterage.Size = new System.Drawing.Size(156, 19);
+            this.checkBoxCableHankMeterage.TabIndex = 10;
+            this.checkBoxCableHankMeterage.Text = "Метраж кабеля в бухте:";
+            this.checkBoxCableHankMeterage.UseVisualStyleBackColor = true;
+            this.checkBoxCableHankMeterage.CheckedChanged += new System.EventHandler(this.checkBoxCableHankMeterage_CheckedChanged);
+            // 
+            // numericUpDownCableHankMeterage
+            // 
+            this.numericUpDownCableHankMeterage.DecimalPlaces = 2;
+            this.numericUpDownCableHankMeterage.Location = new System.Drawing.Point(3, 204);
+            this.numericUpDownCableHankMeterage.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownCableHankMeterage.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownCableHankMeterage.Name = "numericUpDownCableHankMeterage";
+            this.numericUpDownCableHankMeterage.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownCableHankMeterage.TabIndex = 11;
+            this.numericUpDownCableHankMeterage.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // labelMeters3
+            // 
+            this.labelMeters3.AutoSize = true;
+            this.labelMeters3.Location = new System.Drawing.Point(129, 212);
+            this.labelMeters3.Name = "labelMeters3";
+            this.labelMeters3.Size = new System.Drawing.Size(19, 15);
+            this.labelMeters3.TabIndex = 12;
+            this.labelMeters3.Text = "м.";
+            // 
             // CalculateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelMeters3);
+            this.Controls.Add(this.numericUpDownCableHankMeterage);
+            this.Controls.Add(this.checkBoxCableHankMeterage);
+            this.Controls.Add(this.labelMeters2);
+            this.Controls.Add(this.labelMeters1);
             this.Controls.Add(this.numericUpDownNumberOfPorts);
             this.Controls.Add(this.labelNumberOfPorts);
             this.Controls.Add(this.numericUpDownNumberOfWorkplaces);
@@ -180,10 +254,12 @@
             this.Controls.Add(this.labelMinPermamentLink);
             this.Name = "CalculateControl";
             this.Size = new System.Drawing.Size(616, 395);
+            this.Load += new System.EventHandler(this.CalculateControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfWorkplaces)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfPorts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCableHankMeterage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +275,10 @@
         private NumericUpDown numericUpDownNumberOfWorkplaces;
         private Label labelNumberOfPorts;
         private NumericUpDown numericUpDownNumberOfPorts;
+        private Label labelMeters1;
+        private Label labelMeters2;
+        private CheckBox checkBoxCableHankMeterage;
+        private NumericUpDown numericUpDownCableHankMeterage;
+        private Label labelMeters3;
     }
 }

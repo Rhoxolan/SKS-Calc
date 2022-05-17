@@ -16,5 +16,22 @@ namespace SKS_Calc
         {
             InitializeComponent();
         }
+
+        private void CalculateControl_Load(object sender, EventArgs e)
+        {
+            numericUpDownCableHankMeterage.Enabled = false;
+        }
+
+        private void checkBoxCableHankMeterage_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxCableHankMeterage.Checked)
+            {
+                numericUpDownCableHankMeterage.Enabled = true;
+            }
+            if(!checkBoxCableHankMeterage.Checked)
+            {
+                checkBoxCableHankMeterage.Enabled = false;
+            }
+        }
     }
 }
