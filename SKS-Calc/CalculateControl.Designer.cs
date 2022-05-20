@@ -41,11 +41,17 @@
             this.checkBoxCableHankMeterage = new System.Windows.Forms.CheckBox();
             this.numericUpDownCableHankMeterage = new System.Windows.Forms.NumericUpDown();
             this.labelMeters3 = new System.Windows.Forms.Label();
+            this.buttonCalculate = new System.Windows.Forms.Button();
+            this.groupBoxOutput = new System.Windows.Forms.GroupBox();
+            this.labelMinPermamentLinkOutput = new System.Windows.Forms.Label();
+            this.textBoxMinPermamentLinkOutput = new System.Windows.Forms.TextBox();
+            this.labelMeters4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfWorkplaces)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfPorts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCableHankMeterage)).BeginInit();
+            this.groupBoxOutput.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelMinPermamentLink
@@ -235,10 +241,59 @@
             this.labelMeters3.TabIndex = 12;
             this.labelMeters3.Text = "м.";
             // 
+            // buttonCalculate
+            // 
+            this.buttonCalculate.Location = new System.Drawing.Point(3, 233);
+            this.buttonCalculate.Name = "buttonCalculate";
+            this.buttonCalculate.Size = new System.Drawing.Size(85, 23);
+            this.buttonCalculate.TabIndex = 13;
+            this.buttonCalculate.Text = "Рассчитать";
+            this.buttonCalculate.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxOutput
+            // 
+            this.groupBoxOutput.Controls.Add(this.labelMeters4);
+            this.groupBoxOutput.Controls.Add(this.textBoxMinPermamentLinkOutput);
+            this.groupBoxOutput.Controls.Add(this.labelMinPermamentLinkOutput);
+            this.groupBoxOutput.Location = new System.Drawing.Point(3, 262);
+            this.groupBoxOutput.Name = "groupBoxOutput";
+            this.groupBoxOutput.Size = new System.Drawing.Size(384, 169);
+            this.groupBoxOutput.TabIndex = 14;
+            this.groupBoxOutput.TabStop = false;
+            this.groupBoxOutput.Text = "Вывод";
+            // 
+            // labelMinPermamentLinkOutput
+            // 
+            this.labelMinPermamentLinkOutput.AutoSize = true;
+            this.labelMinPermamentLinkOutput.Location = new System.Drawing.Point(6, 30);
+            this.labelMinPermamentLinkOutput.Name = "labelMinPermamentLinkOutput";
+            this.labelMinPermamentLinkOutput.Size = new System.Drawing.Size(229, 15);
+            this.labelMinPermamentLinkOutput.TabIndex = 1;
+            this.labelMinPermamentLinkOutput.Text = "Наименьшая длина постоянного линка:";
+            // 
+            // textBoxMinPermamentLinkOutput
+            // 
+            this.textBoxMinPermamentLinkOutput.Location = new System.Drawing.Point(241, 22);
+            this.textBoxMinPermamentLinkOutput.Name = "textBoxMinPermamentLinkOutput";
+            this.textBoxMinPermamentLinkOutput.ReadOnly = true;
+            this.textBoxMinPermamentLinkOutput.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMinPermamentLinkOutput.TabIndex = 2;
+            // 
+            // labelMeters4
+            // 
+            this.labelMeters4.AutoSize = true;
+            this.labelMeters4.Location = new System.Drawing.Point(347, 30);
+            this.labelMeters4.Name = "labelMeters4";
+            this.labelMeters4.Size = new System.Drawing.Size(19, 15);
+            this.labelMeters4.TabIndex = 9;
+            this.labelMeters4.Text = "м.";
+            // 
             // CalculateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBoxOutput);
+            this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.labelMeters3);
             this.Controls.Add(this.numericUpDownCableHankMeterage);
             this.Controls.Add(this.checkBoxCableHankMeterage);
@@ -253,13 +308,15 @@
             this.Controls.Add(this.numericUpDownMinPermamentLink);
             this.Controls.Add(this.labelMinPermamentLink);
             this.Name = "CalculateControl";
-            this.Size = new System.Drawing.Size(616, 395);
+            this.Size = new System.Drawing.Size(616, 463);
             this.Load += new System.EventHandler(this.CalculateControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfWorkplaces)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfPorts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCableHankMeterage)).EndInit();
+            this.groupBoxOutput.ResumeLayout(false);
+            this.groupBoxOutput.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +337,10 @@
         private CheckBox checkBoxCableHankMeterage;
         private NumericUpDown numericUpDownCableHankMeterage;
         private Label labelMeters3;
+        private Button buttonCalculate;
+        private GroupBox groupBoxOutput;
+        private Label labelMeters4;
+        private TextBox textBoxMinPermamentLinkOutput;
+        private Label labelMinPermamentLinkOutput;
     }
 }
