@@ -43,9 +43,28 @@
             this.labelMeters3 = new System.Windows.Forms.Label();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.groupBoxOutput = new System.Windows.Forms.GroupBox();
-            this.labelMinPermamentLinkOutput = new System.Windows.Forms.Label();
-            this.textBoxMinPermamentLinkOutput = new System.Windows.Forms.TextBox();
+            this.buttonOutputSaveToTxt = new System.Windows.Forms.Button();
+            this.labelOutputTotalСableQuantity = new System.Windows.Forms.Label();
+            this.labelMetersTotal = new System.Windows.Forms.Label();
+            this.textBoxOutputTotalСableQuantity = new System.Windows.Forms.TextBox();
+            this.labelOutputHankQuantity = new System.Windows.Forms.Label();
+            this.textBoxOutputHankQuantity = new System.Windows.Forms.TextBox();
+            this.labelOutputСableQuantity = new System.Windows.Forms.Label();
+            this.labelMeters7 = new System.Windows.Forms.Label();
+            this.textBoxOutputСableQuantity = new System.Windows.Forms.TextBox();
+            this.labelOutputNumberOfPorts = new System.Windows.Forms.Label();
+            this.textBoxOutputNumberOfPorts = new System.Windows.Forms.TextBox();
+            this.labelOutputAveragePermamentLink = new System.Windows.Forms.Label();
+            this.labelMeters6 = new System.Windows.Forms.Label();
+            this.textBoxOutputAveragePermamentLink = new System.Windows.Forms.TextBox();
+            this.labelOutputMaxPermamentLink = new System.Windows.Forms.Label();
+            this.labelMeters5 = new System.Windows.Forms.Label();
+            this.textBoxOutputMaxPermamentLink = new System.Windows.Forms.TextBox();
             this.labelMeters4 = new System.Windows.Forms.Label();
+            this.textBoxOutputMinPermamentLink = new System.Windows.Forms.TextBox();
+            this.labelOutputMinPermamentLink = new System.Windows.Forms.Label();
+            this.buttonInfo = new System.Windows.Forms.Button();
+            this.buttonHistory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfWorkplaces)).BeginInit();
@@ -85,6 +104,7 @@
             0,
             0,
             0});
+            this.numericUpDownMinPermamentLink.ValueChanged += new System.EventHandler(this.numericUpDownMinPermamentLink_ValueChanged);
             // 
             // labelMaxPermamentLink
             // 
@@ -117,6 +137,7 @@
             0,
             0,
             0});
+            this.numericUpDownMaxPermamentLink.ValueChanged += new System.EventHandler(this.numericUpDownMaxPermamentLink_ValueChanged);
             // 
             // labelNumberOfWorkplaces
             // 
@@ -148,6 +169,7 @@
             0,
             0,
             0});
+            this.numericUpDownNumberOfWorkplaces.ValueChanged += new System.EventHandler(this.numericUpDownNumberOfWorkplaces_ValueChanged);
             // 
             // labelNumberOfPorts
             // 
@@ -179,6 +201,7 @@
             0,
             0,
             0});
+            this.numericUpDownNumberOfPorts.ValueChanged += new System.EventHandler(this.numericUpDownNumberOfPorts_ValueChanged);
             // 
             // labelMeters1
             // 
@@ -231,6 +254,7 @@
             0,
             0,
             0});
+            this.numericUpDownCableHankMeterage.ValueChanged += new System.EventHandler(this.numericUpDownCableHankMeterage_ValueChanged);
             // 
             // labelMeters3
             // 
@@ -245,53 +269,248 @@
             // 
             this.buttonCalculate.Location = new System.Drawing.Point(3, 233);
             this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(85, 23);
+            this.buttonCalculate.Size = new System.Drawing.Size(105, 23);
             this.buttonCalculate.TabIndex = 13;
             this.buttonCalculate.Text = "Рассчитать";
             this.buttonCalculate.UseVisualStyleBackColor = true;
             // 
             // groupBoxOutput
             // 
+            this.groupBoxOutput.Controls.Add(this.buttonOutputSaveToTxt);
+            this.groupBoxOutput.Controls.Add(this.labelOutputTotalСableQuantity);
+            this.groupBoxOutput.Controls.Add(this.labelMetersTotal);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputTotalСableQuantity);
+            this.groupBoxOutput.Controls.Add(this.labelOutputHankQuantity);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputHankQuantity);
+            this.groupBoxOutput.Controls.Add(this.labelOutputСableQuantity);
+            this.groupBoxOutput.Controls.Add(this.labelMeters7);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputСableQuantity);
+            this.groupBoxOutput.Controls.Add(this.labelOutputNumberOfPorts);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputNumberOfPorts);
+            this.groupBoxOutput.Controls.Add(this.labelOutputAveragePermamentLink);
+            this.groupBoxOutput.Controls.Add(this.labelMeters6);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputAveragePermamentLink);
+            this.groupBoxOutput.Controls.Add(this.labelOutputMaxPermamentLink);
+            this.groupBoxOutput.Controls.Add(this.labelMeters5);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputMaxPermamentLink);
             this.groupBoxOutput.Controls.Add(this.labelMeters4);
-            this.groupBoxOutput.Controls.Add(this.textBoxMinPermamentLinkOutput);
-            this.groupBoxOutput.Controls.Add(this.labelMinPermamentLinkOutput);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputMinPermamentLink);
+            this.groupBoxOutput.Controls.Add(this.labelOutputMinPermamentLink);
             this.groupBoxOutput.Location = new System.Drawing.Point(3, 262);
             this.groupBoxOutput.Name = "groupBoxOutput";
-            this.groupBoxOutput.Size = new System.Drawing.Size(384, 169);
+            this.groupBoxOutput.Size = new System.Drawing.Size(509, 256);
             this.groupBoxOutput.TabIndex = 14;
             this.groupBoxOutput.TabStop = false;
             this.groupBoxOutput.Text = "Вывод";
             // 
-            // labelMinPermamentLinkOutput
+            // buttonOutputSaveToTxt
             // 
-            this.labelMinPermamentLinkOutput.AutoSize = true;
-            this.labelMinPermamentLinkOutput.Location = new System.Drawing.Point(6, 30);
-            this.labelMinPermamentLinkOutput.Name = "labelMinPermamentLinkOutput";
-            this.labelMinPermamentLinkOutput.Size = new System.Drawing.Size(229, 15);
-            this.labelMinPermamentLinkOutput.TabIndex = 1;
-            this.labelMinPermamentLinkOutput.Text = "Наименьшая длина постоянного линка:";
+            this.buttonOutputSaveToTxt.Location = new System.Drawing.Point(7, 225);
+            this.buttonOutputSaveToTxt.Name = "buttonOutputSaveToTxt";
+            this.buttonOutputSaveToTxt.Size = new System.Drawing.Size(105, 23);
+            this.buttonOutputSaveToTxt.TabIndex = 15;
+            this.buttonOutputSaveToTxt.Text = "Сохранить в TXT";
+            this.buttonOutputSaveToTxt.UseVisualStyleBackColor = true;
             // 
-            // textBoxMinPermamentLinkOutput
+            // labelOutputTotalСableQuantity
             // 
-            this.textBoxMinPermamentLinkOutput.Location = new System.Drawing.Point(241, 22);
-            this.textBoxMinPermamentLinkOutput.Name = "textBoxMinPermamentLinkOutput";
-            this.textBoxMinPermamentLinkOutput.ReadOnly = true;
-            this.textBoxMinPermamentLinkOutput.Size = new System.Drawing.Size(100, 23);
-            this.textBoxMinPermamentLinkOutput.TabIndex = 2;
+            this.labelOutputTotalСableQuantity.AutoSize = true;
+            this.labelOutputTotalСableQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelOutputTotalСableQuantity.Location = new System.Drawing.Point(6, 204);
+            this.labelOutputTotalСableQuantity.Name = "labelOutputTotalСableQuantity";
+            this.labelOutputTotalСableQuantity.Size = new System.Drawing.Size(251, 15);
+            this.labelOutputTotalСableQuantity.TabIndex = 25;
+            this.labelOutputTotalСableQuantity.Text = "Итоговое необходимое количество кабеля:";
+            // 
+            // labelMetersTotal
+            // 
+            this.labelMetersTotal.AutoSize = true;
+            this.labelMetersTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelMetersTotal.Location = new System.Drawing.Point(480, 204);
+            this.labelMetersTotal.Name = "labelMetersTotal";
+            this.labelMetersTotal.Size = new System.Drawing.Size(19, 15);
+            this.labelMetersTotal.TabIndex = 24;
+            this.labelMetersTotal.Text = "м.";
+            // 
+            // textBoxOutputTotalСableQuantity
+            // 
+            this.textBoxOutputTotalСableQuantity.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputTotalСableQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOutputTotalСableQuantity.Location = new System.Drawing.Point(374, 196);
+            this.textBoxOutputTotalСableQuantity.Name = "textBoxOutputTotalСableQuantity";
+            this.textBoxOutputTotalСableQuantity.ReadOnly = true;
+            this.textBoxOutputTotalСableQuantity.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputTotalСableQuantity.TabIndex = 23;
+            // 
+            // labelOutputHankQuantity
+            // 
+            this.labelOutputHankQuantity.AutoSize = true;
+            this.labelOutputHankQuantity.Location = new System.Drawing.Point(7, 175);
+            this.labelOutputHankQuantity.Name = "labelOutputHankQuantity";
+            this.labelOutputHankQuantity.Size = new System.Drawing.Size(225, 15);
+            this.labelOutputHankQuantity.TabIndex = 22;
+            this.labelOutputHankQuantity.Text = "Необходимое количество бухт кабеля: ";
+            // 
+            // textBoxOutputHankQuantity
+            // 
+            this.textBoxOutputHankQuantity.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputHankQuantity.Location = new System.Drawing.Point(374, 167);
+            this.textBoxOutputHankQuantity.Name = "textBoxOutputHankQuantity";
+            this.textBoxOutputHankQuantity.ReadOnly = true;
+            this.textBoxOutputHankQuantity.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputHankQuantity.TabIndex = 21;
+            // 
+            // labelOutputСableQuantity
+            // 
+            this.labelOutputСableQuantity.AutoSize = true;
+            this.labelOutputСableQuantity.Location = new System.Drawing.Point(7, 146);
+            this.labelOutputСableQuantity.Name = "labelOutputСableQuantity";
+            this.labelOutputСableQuantity.Size = new System.Drawing.Size(198, 15);
+            this.labelOutputСableQuantity.TabIndex = 20;
+            this.labelOutputСableQuantity.Text = "Необходимое количество кабеля: ";
+            // 
+            // labelMeters7
+            // 
+            this.labelMeters7.AutoSize = true;
+            this.labelMeters7.Location = new System.Drawing.Point(480, 146);
+            this.labelMeters7.Name = "labelMeters7";
+            this.labelMeters7.Size = new System.Drawing.Size(19, 15);
+            this.labelMeters7.TabIndex = 19;
+            this.labelMeters7.Text = "м.";
+            // 
+            // textBoxOutputСableQuantity
+            // 
+            this.textBoxOutputСableQuantity.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputСableQuantity.Location = new System.Drawing.Point(374, 138);
+            this.textBoxOutputСableQuantity.Name = "textBoxOutputСableQuantity";
+            this.textBoxOutputСableQuantity.ReadOnly = true;
+            this.textBoxOutputСableQuantity.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputСableQuantity.TabIndex = 18;
+            // 
+            // labelOutputNumberOfPorts
+            // 
+            this.labelOutputNumberOfPorts.AutoSize = true;
+            this.labelOutputNumberOfPorts.Location = new System.Drawing.Point(6, 117);
+            this.labelOutputNumberOfPorts.Name = "labelOutputNumberOfPorts";
+            this.labelOutputNumberOfPorts.Size = new System.Drawing.Size(227, 15);
+            this.labelOutputNumberOfPorts.TabIndex = 17;
+            this.labelOutputNumberOfPorts.Text = "Количество портов на 1 рабочее место:";
+            // 
+            // textBoxOutputNumberOfPorts
+            // 
+            this.textBoxOutputNumberOfPorts.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputNumberOfPorts.Location = new System.Drawing.Point(374, 109);
+            this.textBoxOutputNumberOfPorts.Name = "textBoxOutputNumberOfPorts";
+            this.textBoxOutputNumberOfPorts.ReadOnly = true;
+            this.textBoxOutputNumberOfPorts.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputNumberOfPorts.TabIndex = 16;
+            // 
+            // labelOutputAveragePermamentLink
+            // 
+            this.labelOutputAveragePermamentLink.AutoSize = true;
+            this.labelOutputAveragePermamentLink.Location = new System.Drawing.Point(7, 88);
+            this.labelOutputAveragePermamentLink.Name = "labelOutputAveragePermamentLink";
+            this.labelOutputAveragePermamentLink.Size = new System.Drawing.Size(300, 15);
+            this.labelOutputAveragePermamentLink.TabIndex = 15;
+            this.labelOutputAveragePermamentLink.Text = "Средняя длина постоянного линка (Permament Link):";
+            // 
+            // labelMeters6
+            // 
+            this.labelMeters6.AutoSize = true;
+            this.labelMeters6.Location = new System.Drawing.Point(480, 88);
+            this.labelMeters6.Name = "labelMeters6";
+            this.labelMeters6.Size = new System.Drawing.Size(19, 15);
+            this.labelMeters6.TabIndex = 14;
+            this.labelMeters6.Text = "м.";
+            // 
+            // textBoxOutputAveragePermamentLink
+            // 
+            this.textBoxOutputAveragePermamentLink.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputAveragePermamentLink.Location = new System.Drawing.Point(374, 80);
+            this.textBoxOutputAveragePermamentLink.Name = "textBoxOutputAveragePermamentLink";
+            this.textBoxOutputAveragePermamentLink.ReadOnly = true;
+            this.textBoxOutputAveragePermamentLink.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputAveragePermamentLink.TabIndex = 13;
+            // 
+            // labelOutputMaxPermamentLink
+            // 
+            this.labelOutputMaxPermamentLink.AutoSize = true;
+            this.labelOutputMaxPermamentLink.Location = new System.Drawing.Point(7, 59);
+            this.labelOutputMaxPermamentLink.Name = "labelOutputMaxPermamentLink";
+            this.labelOutputMaxPermamentLink.Size = new System.Drawing.Size(326, 15);
+            this.labelOutputMaxPermamentLink.TabIndex = 12;
+            this.labelOutputMaxPermamentLink.Text = "Наибольшая длина постоянного линка (Permament Link):";
+            // 
+            // labelMeters5
+            // 
+            this.labelMeters5.AutoSize = true;
+            this.labelMeters5.Location = new System.Drawing.Point(480, 59);
+            this.labelMeters5.Name = "labelMeters5";
+            this.labelMeters5.Size = new System.Drawing.Size(19, 15);
+            this.labelMeters5.TabIndex = 11;
+            this.labelMeters5.Text = "м.";
+            // 
+            // textBoxOutputMaxPermamentLink
+            // 
+            this.textBoxOutputMaxPermamentLink.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputMaxPermamentLink.Location = new System.Drawing.Point(374, 51);
+            this.textBoxOutputMaxPermamentLink.Name = "textBoxOutputMaxPermamentLink";
+            this.textBoxOutputMaxPermamentLink.ReadOnly = true;
+            this.textBoxOutputMaxPermamentLink.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputMaxPermamentLink.TabIndex = 10;
             // 
             // labelMeters4
             // 
             this.labelMeters4.AutoSize = true;
-            this.labelMeters4.Location = new System.Drawing.Point(347, 30);
+            this.labelMeters4.Location = new System.Drawing.Point(480, 30);
             this.labelMeters4.Name = "labelMeters4";
             this.labelMeters4.Size = new System.Drawing.Size(19, 15);
             this.labelMeters4.TabIndex = 9;
             this.labelMeters4.Text = "м.";
             // 
+            // textBoxOutputMinPermamentLink
+            // 
+            this.textBoxOutputMinPermamentLink.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputMinPermamentLink.Location = new System.Drawing.Point(374, 22);
+            this.textBoxOutputMinPermamentLink.Name = "textBoxOutputMinPermamentLink";
+            this.textBoxOutputMinPermamentLink.ReadOnly = true;
+            this.textBoxOutputMinPermamentLink.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputMinPermamentLink.TabIndex = 2;
+            // 
+            // labelOutputMinPermamentLink
+            // 
+            this.labelOutputMinPermamentLink.AutoSize = true;
+            this.labelOutputMinPermamentLink.Location = new System.Drawing.Point(6, 30);
+            this.labelOutputMinPermamentLink.Name = "labelOutputMinPermamentLink";
+            this.labelOutputMinPermamentLink.Size = new System.Drawing.Size(327, 15);
+            this.labelOutputMinPermamentLink.TabIndex = 1;
+            this.labelOutputMinPermamentLink.Text = "Наименьшая длина постоянного линка (Permament Link):";
+            // 
+            // buttonInfo
+            // 
+            this.buttonInfo.Location = new System.Drawing.Point(407, 233);
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.Size = new System.Drawing.Size(105, 23);
+            this.buttonInfo.TabIndex = 15;
+            this.buttonInfo.Text = "Информация";
+            this.buttonInfo.UseVisualStyleBackColor = true;
+            // 
+            // buttonHistory
+            // 
+            this.buttonHistory.Location = new System.Drawing.Point(296, 233);
+            this.buttonHistory.Name = "buttonHistory";
+            this.buttonHistory.Size = new System.Drawing.Size(105, 23);
+            this.buttonHistory.TabIndex = 16;
+            this.buttonHistory.Text = "История";
+            this.buttonHistory.UseVisualStyleBackColor = true;
+            // 
             // CalculateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.buttonHistory);
+            this.Controls.Add(this.buttonInfo);
             this.Controls.Add(this.groupBoxOutput);
             this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.labelMeters3);
@@ -308,7 +527,7 @@
             this.Controls.Add(this.numericUpDownMinPermamentLink);
             this.Controls.Add(this.labelMinPermamentLink);
             this.Name = "CalculateControl";
-            this.Size = new System.Drawing.Size(616, 463);
+            this.Size = new System.Drawing.Size(514, 520);
             this.Load += new System.EventHandler(this.CalculateControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).EndInit();
@@ -340,7 +559,26 @@
         private Button buttonCalculate;
         private GroupBox groupBoxOutput;
         private Label labelMeters4;
-        private TextBox textBoxMinPermamentLinkOutput;
-        private Label labelMinPermamentLinkOutput;
+        private TextBox textBoxOutputMinPermamentLink;
+        private Label labelOutputMinPermamentLink;
+        private Label labelOutputAveragePermamentLink;
+        private Label labelMeters6;
+        private TextBox textBoxOutputAveragePermamentLink;
+        private Label labelOutputMaxPermamentLink;
+        private Label labelMeters5;
+        private TextBox textBoxOutputMaxPermamentLink;
+        private Label labelOutputNumberOfPorts;
+        private TextBox textBoxOutputNumberOfPorts;
+        private Button buttonOutputSaveToTxt;
+        private Label labelOutputTotalСableQuantity;
+        private Label labelMetersTotal;
+        private TextBox textBoxOutputTotalСableQuantity;
+        private Label labelOutputHankQuantity;
+        private TextBox textBoxOutputHankQuantity;
+        private Label labelOutputСableQuantity;
+        private Label labelMeters7;
+        private TextBox textBoxOutputСableQuantity;
+        private Button buttonInfo;
+        private Button buttonHistory;
     }
 }
