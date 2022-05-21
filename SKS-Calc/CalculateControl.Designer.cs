@@ -104,7 +104,6 @@
             0,
             0,
             0});
-            this.numericUpDownMinPermamentLink.ValueChanged += new System.EventHandler(this.numericUpDownMinPermamentLink_ValueChanged);
             // 
             // labelMaxPermamentLink
             // 
@@ -137,7 +136,6 @@
             0,
             0,
             0});
-            this.numericUpDownMaxPermamentLink.ValueChanged += new System.EventHandler(this.numericUpDownMaxPermamentLink_ValueChanged);
             // 
             // labelNumberOfWorkplaces
             // 
@@ -169,7 +167,6 @@
             0,
             0,
             0});
-            this.numericUpDownNumberOfWorkplaces.ValueChanged += new System.EventHandler(this.numericUpDownNumberOfWorkplaces_ValueChanged);
             // 
             // labelNumberOfPorts
             // 
@@ -201,7 +198,6 @@
             0,
             0,
             0});
-            this.numericUpDownNumberOfPorts.ValueChanged += new System.EventHandler(this.numericUpDownNumberOfPorts_ValueChanged);
             // 
             // labelMeters1
             // 
@@ -254,7 +250,6 @@
             0,
             0,
             0});
-            this.numericUpDownCableHankMeterage.ValueChanged += new System.EventHandler(this.numericUpDownCableHankMeterage_ValueChanged);
             // 
             // labelMeters3
             // 

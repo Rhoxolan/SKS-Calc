@@ -20,10 +20,23 @@ namespace SKS_Calc
         private void CalculateControl_Load(object sender, EventArgs e)
         {
             numericUpDownCableHankMeterage.Enabled = false;
-            OutputBlockCleaner();
+            OutputBlockCleaner(null, null);
         }
 
-        private void OutputBlockCleaner()
+        private void checkBoxCableHankMeterage_CheckedChanged(object sender, EventArgs e)
+        {
+            OutputBlockCleaner(null, null);
+            if (checkBoxCableHankMeterage.Checked)
+            {
+                numericUpDownCableHankMeterage.Enabled = true;
+            }
+            if(!checkBoxCableHankMeterage.Checked)
+            {
+                checkBoxCableHankMeterage.Enabled = false;
+            }
+        }
+
+        private void OutputBlockCleaner(object sender, EventArgs e)
         {
             textBoxOutputMinPermamentLink.Text = string.Empty;
             textBoxOutputMaxPermamentLink.Text = string.Empty;
@@ -49,44 +62,6 @@ namespace SKS_Calc
                 textBoxOutputHankQuantity.Enabled = false;
             }
             buttonOutputSaveToTxt.Enabled = false;
-        }
-
-        private void checkBoxCableHankMeterage_CheckedChanged(object sender, EventArgs e)
-        {
-            OutputBlockCleaner();
-            if (checkBoxCableHankMeterage.Checked)
-            {
-                numericUpDownCableHankMeterage.Enabled = true;
-            }
-            if(!checkBoxCableHankMeterage.Checked)
-            {
-                checkBoxCableHankMeterage.Enabled = false;
-            }
-        }
-
-        private void numericUpDownMinPermamentLink_ValueChanged(object sender, EventArgs e)
-        {
-            OutputBlockCleaner();
-        }
-
-        private void numericUpDownMaxPermamentLink_ValueChanged(object sender, EventArgs e)
-        {
-            OutputBlockCleaner();
-        }
-
-        private void numericUpDownNumberOfWorkplaces_ValueChanged(object sender, EventArgs e)
-        {
-            OutputBlockCleaner();
-        }
-
-        private void numericUpDownNumberOfPorts_ValueChanged(object sender, EventArgs e)
-        {
-            OutputBlockCleaner();
-        }
-
-        private void numericUpDownCableHankMeterage_ValueChanged(object sender, EventArgs e)
-        {
-            OutputBlockCleaner();
         }
     }
 }
