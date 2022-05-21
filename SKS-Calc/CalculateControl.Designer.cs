@@ -329,7 +329,7 @@
             // 
             // textBoxOutputTotalСableQuantity
             // 
-            this.textBoxOutputTotalСableQuantity.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputTotalСableQuantity.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxOutputTotalСableQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxOutputTotalСableQuantity.Location = new System.Drawing.Point(374, 196);
             this.textBoxOutputTotalСableQuantity.Name = "textBoxOutputTotalСableQuantity";
@@ -348,7 +348,7 @@
             // 
             // textBoxOutputHankQuantity
             // 
-            this.textBoxOutputHankQuantity.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputHankQuantity.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxOutputHankQuantity.Location = new System.Drawing.Point(374, 167);
             this.textBoxOutputHankQuantity.Name = "textBoxOutputHankQuantity";
             this.textBoxOutputHankQuantity.ReadOnly = true;
@@ -375,7 +375,7 @@
             // 
             // textBoxOutputСableQuantity
             // 
-            this.textBoxOutputСableQuantity.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputСableQuantity.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxOutputСableQuantity.Location = new System.Drawing.Point(374, 138);
             this.textBoxOutputСableQuantity.Name = "textBoxOutputСableQuantity";
             this.textBoxOutputСableQuantity.ReadOnly = true;
@@ -393,7 +393,7 @@
             // 
             // textBoxOutputNumberOfPorts
             // 
-            this.textBoxOutputNumberOfPorts.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputNumberOfPorts.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxOutputNumberOfPorts.Location = new System.Drawing.Point(374, 109);
             this.textBoxOutputNumberOfPorts.Name = "textBoxOutputNumberOfPorts";
             this.textBoxOutputNumberOfPorts.ReadOnly = true;
@@ -420,7 +420,7 @@
             // 
             // textBoxOutputAveragePermamentLink
             // 
-            this.textBoxOutputAveragePermamentLink.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputAveragePermamentLink.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxOutputAveragePermamentLink.Location = new System.Drawing.Point(374, 80);
             this.textBoxOutputAveragePermamentLink.Name = "textBoxOutputAveragePermamentLink";
             this.textBoxOutputAveragePermamentLink.ReadOnly = true;
@@ -447,7 +447,7 @@
             // 
             // textBoxOutputMaxPermamentLink
             // 
-            this.textBoxOutputMaxPermamentLink.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputMaxPermamentLink.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxOutputMaxPermamentLink.Location = new System.Drawing.Point(374, 51);
             this.textBoxOutputMaxPermamentLink.Name = "textBoxOutputMaxPermamentLink";
             this.textBoxOutputMaxPermamentLink.ReadOnly = true;
@@ -465,7 +465,7 @@
             // 
             // textBoxOutputMinPermamentLink
             // 
-            this.textBoxOutputMinPermamentLink.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxOutputMinPermamentLink.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxOutputMinPermamentLink.Location = new System.Drawing.Point(374, 22);
             this.textBoxOutputMinPermamentLink.Name = "textBoxOutputMinPermamentLink";
             this.textBoxOutputMinPermamentLink.ReadOnly = true;
