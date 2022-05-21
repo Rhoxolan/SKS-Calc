@@ -15,17 +15,22 @@ namespace SKS_Calc
         public CalculateControl()
         {
             InitializeComponent();
+            this.Load += OutputBlockCleaner; //Устанавливаем начальное отображение блока вывода
+            numericUpDownMinPermamentLink.ValueChanged += OutputBlockCleaner; //Очищаем блок вывода при любых изменениях
+            numericUpDownMaxPermamentLink.ValueChanged += OutputBlockCleaner;
+            numericUpDownNumberOfWorkplaces.ValueChanged += OutputBlockCleaner;
+            numericUpDownNumberOfPorts.ValueChanged += OutputBlockCleaner;
+            checkBoxCableHankMeterage.CheckedChanged += OutputBlockCleaner;
+            numericUpDownCableHankMeterage.ValueChanged += OutputBlockCleaner;
         }
 
         private void CalculateControl_Load(object sender, EventArgs e)
         {
-            numericUpDownCableHankMeterage.Enabled = false;
-            OutputBlockCleaner(null, null);
+            checkBoxCableHankMeterage.Checked = false;
         }
 
         private void checkBoxCableHankMeterage_CheckedChanged(object sender, EventArgs e)
         {
-            OutputBlockCleaner(null, null);
             if (checkBoxCableHankMeterage.Checked)
             {
                 numericUpDownCableHankMeterage.Enabled = true;
@@ -36,7 +41,7 @@ namespace SKS_Calc
             }
         }
 
-        private void OutputBlockCleaner(object sender, EventArgs e)
+        private void OutputBlockCleaner(object? sender, EventArgs? e)
         {
             textBoxOutputMinPermamentLink.Text = string.Empty;
             textBoxOutputMaxPermamentLink.Text = string.Empty;
