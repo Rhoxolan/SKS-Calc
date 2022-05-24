@@ -12,9 +12,15 @@ namespace SKS_Calc
 {
     public partial class CalculateControl : UserControl
     {
-        public CalculateControl()
+        private BindingList<Configuration> configurations;
+
+        public List<UserControl> OtherControls { get; set; }
+
+        public CalculateControl(BindingList<Configuration> configurations)
         {
             InitializeComponent();
+            this.configurations = configurations;
+            OtherControls = new();
             this.Load += OutputBlockCleaner; //Устанавливаем начальное отображение блока вывода
             numericUpDownMinPermamentLink.ValueChanged += OutputBlockCleaner; //Очищаем блок вывода при любых изменениях
             numericUpDownMaxPermamentLink.ValueChanged += OutputBlockCleaner;

@@ -12,9 +12,15 @@ namespace SKS_Calc
 {
     public partial class HistoryControl : UserControl
     {
-        public HistoryControl()
+        private BindingList<Configuration> configurations;
+
+        public List<UserControl> OtherControls { get; set; }
+
+        public HistoryControl(BindingList<Configuration> configurations)
         {
             InitializeComponent();
+            OtherControls = new();
+            this.configurations = configurations;
         }
     }
 }

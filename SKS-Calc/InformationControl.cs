@@ -12,9 +12,12 @@ namespace SKS_Calc
 {
     public partial class InformationControl : UserControl
     {
+        public List<UserControl> OtherControls { get; set; }
+
         public InformationControl()
         {
             InitializeComponent();
+            OtherControls = new();
         }
     }
 }
