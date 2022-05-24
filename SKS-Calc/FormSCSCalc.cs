@@ -28,9 +28,9 @@ namespace SKS_Calc
         {
             calculateControl.Location = new Point(5, 7);
             this.Controls.Add(calculateControl);
-            historyControl.Location = new Point(5, 10);
+            historyControl.Location = new Point(5, 7);
             this.Controls.Add(historyControl);
-            informationControl.Location = new Point(5, 10);
+            informationControl.Location = new Point(5, 7);
             this.Controls.Add(informationControl);
             historyControl.Visible = false;
             informationControl.Visible = false;
