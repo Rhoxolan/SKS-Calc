@@ -13,10 +13,10 @@ namespace SKS_Calc
         {
             InitializeComponent();
             configurations = new();
-            calculateControl = new(configurations); //Передача контролам ссылки на BindingList
+            calculateControl = new(configurations); //РџРµСЂРµРґР°С‡Р° РєРѕРЅС‚СЂРѕР»Р°Рј СЃСЃС‹Р»РєРё РЅР° BindingList
             historyControl = new(configurations);
             informationControl = new();
-            calculateControl.OtherControls.Add(historyControl); //Передаём контролам ссылки на другие контролы для отображения/скрытия контролов на форме
+            calculateControl.OtherControls.Add(historyControl); //РџРµСЂРµРґР°С‘Рј РєРѕРЅС‚СЂРѕР»Р°Рј СЃСЃС‹Р»РєРё РЅР° РґСЂСѓРіРёРµ РєРѕРЅС‚СЂРѕР»С‹ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ/СЃРєСЂС‹С‚РёСЏ РєРѕРЅС‚СЂРѕР»РѕРІ РЅР° С„РѕСЂРјРµ
             calculateControl.OtherControls.Add(informationControl);
             historyControl.OtherControls.Add(calculateControl);
             historyControl.OtherControls.Add(informationControl);
