@@ -54,6 +54,7 @@
             this.buttonDelete.TabIndex = 17;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonRemoveAll
             // 
@@ -63,6 +64,7 @@
             this.buttonRemoveAll.TabIndex = 18;
             this.buttonRemoveAll.Text = "Удалить всё";
             this.buttonRemoveAll.UseVisualStyleBackColor = true;
+            this.buttonRemoveAll.Click += new System.EventHandler(this.buttonRemoveAll_Click);
             // 
             // buttonBack
             // 

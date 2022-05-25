@@ -70,5 +70,36 @@ namespace SKS_Calc
                     $"{configurations[listBoxConfigurationsList.SelectedIndex].TotalСableQuantity.ToString("F" + 2)}{Environment.NewLine}";
             }
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (listBoxConfigurationsList.SelectedValue != null)
+            {
+                if(MessageBox.Show("Вы точно хотите удалить запись конфигурации?", "Удаление записи конфигурации",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    configurations.RemoveAt(listBoxConfigurationsList.SelectedIndex);
+                    textBoxShowConfigurationDetails.Text = String.Empty;
+                    //Saver(configurations);
+                }
+            }
+        }
+
+        private void buttonRemoveAll_Click(object sender, EventArgs e)
+        {
+            if (configurations.Count > 0)
+            {
+                if (MessageBox.Show("Вы точно хотите удалить ВСЕ записи конфигурации?", "Удаление записей конфигурации",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    for (int i = configurations.Count - 1; i >= 0; i--)
+                    {
+                        configurations.RemoveAt(i);
+                    }
+                    textBoxShowConfigurationDetails.Text = String.Empty;
+                    //Saver(configurations);
+                }
+            }
+        }
     }
 }
