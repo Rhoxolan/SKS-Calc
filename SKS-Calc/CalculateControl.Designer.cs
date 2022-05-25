@@ -268,6 +268,7 @@
             this.buttonCalculate.TabIndex = 13;
             this.buttonCalculate.Text = "Рассчитать";
             this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // groupBoxOutput
             // 

@@ -44,11 +44,11 @@ namespace SKS_Calc
             }
             if(!checkBoxCableHankMeterage.Checked)
             {
-                checkBoxCableHankMeterage.Enabled = false;
+                numericUpDownCableHankMeterage.Enabled = false;
             }
         }
 
-        private void OutputBlockCleaner(object? sender, EventArgs? e)
+        private void OutputBlockCleaner(object? sender, EventArgs e)
         {
             textBoxOutputMinPermamentLink.Text = string.Empty;
             textBoxOutputMaxPermamentLink.Text = string.Empty;
@@ -57,6 +57,7 @@ namespace SKS_Calc
             textBoxOutputСableQuantity.Text = string.Empty;
             textBoxOutputHankQuantity.Text = string.Empty;
             textBoxOutputTotalСableQuantity.Text = string.Empty;
+            numericUpDownCableHankMeterage.Enabled = false;
             if (checkBoxCableHankMeterage.Checked)
             {
                 labelOutputСableQuantity.Enabled = true;
@@ -64,6 +65,7 @@ namespace SKS_Calc
                 labelMeters7.Enabled = true;
                 labelOutputHankQuantity.Enabled = true;
                 textBoxOutputHankQuantity.Enabled = true;
+                numericUpDownCableHankMeterage.Enabled = true;
             }
             if (!checkBoxCableHankMeterage.Checked)
             {
@@ -72,6 +74,7 @@ namespace SKS_Calc
                 labelMeters7.Enabled = false;
                 labelOutputHankQuantity.Enabled = false;
                 textBoxOutputHankQuantity.Enabled = false;
+                numericUpDownCableHankMeterage.Enabled = false;
             }
             buttonOutputSaveToTxt.Enabled = false;
         }
@@ -91,6 +94,26 @@ namespace SKS_Calc
             {
                 this.Visible = false;
                 InformationControl.Visible = true;
+            }
+        }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            double MinPermamentLink = (double)numericUpDownMinPermamentLink.Value;
+            double MaxPermamentLink = (double)numericUpDownMaxPermamentLink.Value;
+            double AveragePermamentLink = (MinPermamentLink + MaxPermamentLink) / 2 * 1.15;
+            double? HankQuantity = null;
+            double? СableQuantity = null;
+            if (checkBoxCableHankMeterage.Checked) //Тут всё перепроверить
+            {
+                HankQuantity = (int)numericUpDownCableHankMeterage.Value;
+                if (AveragePermamentLink > HankQuantity)
+                {
+                    MessageBox.Show("Расчет провести невозможно! Значение средней длины постояного линка " +
+                        "превышает значение метража кабеля в бухте. Согласно стандарту ISO/IEC 11801, сращивание" +
+                        "витой пары запрещено. Повторите расчет с друими параметрами.", "Внимание!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }

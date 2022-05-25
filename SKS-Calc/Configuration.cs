@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace SKS_Calc
 {
     public record Configuration(DateTime RecordTime, double MinPermamentLink, double MaxPermamentLink,
-        double AveragePermamentLink, int NumberOfPorts, double СableQuantity, double? HankQuantity,
-        double? TotalСableQuantity)
+        double AveragePermamentLink, int NumberOfPorts, double? СableQuantity, double? HankQuantity,
+        double TotalСableQuantity)
     {
         public override string ToString()
         {
