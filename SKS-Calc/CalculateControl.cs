@@ -99,21 +99,31 @@ namespace SKS_Calc
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            double MinPermamentLink = (double)numericUpDownMinPermamentLink.Value;
-            double MaxPermamentLink = (double)numericUpDownMaxPermamentLink.Value;
-            double AveragePermamentLink = (MinPermamentLink + MaxPermamentLink) / 2 * 1.15;
-            double? HankQuantity = null;
-            double? СableQuantity = null;
-            if (checkBoxCableHankMeterage.Checked) //Тут всё перепроверить
+            if (checkBoxCableHankMeterage.Checked)
             {
-                HankQuantity = (int)numericUpDownCableHankMeterage.Value;
-                if (AveragePermamentLink > HankQuantity)
+                double MinPermamentLink = (double)numericUpDownMinPermamentLink.Value;
+                double MaxPermamentLink = (double)numericUpDownMaxPermamentLink.Value;
+                double AveragePermamentLink = (MinPermamentLink + MaxPermamentLink) / 2 * 1.15;
+                int NumberOfWorkplaces = (int)numericUpDownNumberOfWorkplaces.Value;
+                int NumberOfPorts = (int)numericUpDownNumberOfPorts.Value;
+                double CableHankMeterage = (double)numericUpDownCableHankMeterage.Value;
+                if (AveragePermamentLink > CableHankMeterage)
                 {
                     MessageBox.Show("Расчет провести невозможно! Значение средней длины постояного линка " +
                         "превышает значение метража кабеля в бухте. Согласно стандарту ISO/IEC 11801, сращивание" +
                         "витой пары запрещено. Повторите расчет с друими параметрами.", "Внимание!",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
+                double СableQuantity = AveragePermamentLink * NumberOfWorkplaces * NumberOfPorts;
+                int HankQuantity = (int)Math.Ceiling(NumberOfWorkplaces * NumberOfPorts / Math.Floor(CableHankMeterage / AveragePermamentLink));
+                double TotalСableQuantity = HankQuantity * CableHankMeterage;
+                configurations.Add(new(DateTime.Now, MinPermamentLink, MaxPermamentLink, AveragePermamentLink,
+                    NumberOfWorkplaces, NumberOfPorts, СableQuantity, HankQuantity, TotalСableQuantity));
+            }
+            else
+            {
+
             }
         }
     }
