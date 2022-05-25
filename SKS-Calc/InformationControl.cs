@@ -28,5 +28,10 @@ namespace SKS_Calc
                 CalculateControl.Visible = true;
             }
         }
+
+        private void InformationControl_Load(object sender, EventArgs e)
+        {
+            textBoxInformation.Text = Properties.Resources.Text;
+        }
     }
 }

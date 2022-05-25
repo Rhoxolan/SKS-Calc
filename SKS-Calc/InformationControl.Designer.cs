@@ -46,6 +46,7 @@
             // textBoxInformation
             // 
             this.textBoxInformation.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxInformation.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxInformation.Location = new System.Drawing.Point(3, 3);
             this.textBoxInformation.Multiline = true;
             this.textBoxInformation.Name = "textBoxInformation";
@@ -73,6 +74,7 @@
             this.Controls.Add(this.buttonBack);
             this.Name = "InformationControl";
             this.Size = new System.Drawing.Size(514, 520);
+            this.Load += new System.EventHandler(this.InformationControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
