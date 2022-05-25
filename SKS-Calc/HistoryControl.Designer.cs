@@ -44,6 +44,7 @@
             this.listBoxConfigurationsList.Name = "listBoxConfigurationsList";
             this.listBoxConfigurationsList.Size = new System.Drawing.Size(397, 259);
             this.listBoxConfigurationsList.TabIndex = 0;
+            this.listBoxConfigurationsList.SelectedIndexChanged += new System.EventHandler(this.listBoxConfigurationsList_SelectedIndexChanged);
             // 
             // buttonDelete
             // 

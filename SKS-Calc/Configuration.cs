@@ -14,12 +14,12 @@ namespace SKS_Calc
         {
             if(HankQuantity!=null)
             {
-                return $"{RecordTime.ToString()}, мин.{MinPermamentLink} м / макс.{MaxPermamentLink} м," +
+                return $"{RecordTime.ToString()}, мин.{MinPermamentLink} м / макс.{MaxPermamentLink} м, " +
                     $"{HankQuantity} бухт; {TotalСableQuantity} м.";
             }
             else
             {
-                return $"{RecordTime.ToString()}, мин.{MinPermamentLink} м / макс.{MaxPermamentLink} м;" +
+                return $"{RecordTime.ToString()}, мин.{MinPermamentLink} м / макс.{MaxPermamentLink} м; " +
                     $"{TotalСableQuantity} м.";
             }
         }

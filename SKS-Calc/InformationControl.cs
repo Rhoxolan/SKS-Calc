@@ -13,6 +13,7 @@ namespace SKS_Calc
     public partial class InformationControl : UserControl
     {
         public CalculateControl? CalculateControl { get; set; }
+
         public InformationControl()
         {
             InitializeComponent();
