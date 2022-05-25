@@ -16,12 +16,10 @@ namespace SKS_Calc
             calculateControl = new(configurations); //Передача контролам ссылки на BindingList
             historyControl = new(configurations);
             informationControl = new();
-            calculateControl.OtherControls.Add(historyControl); //Передаём контролам ссылки на другие контролы для отображения/скрытия контролов на форме
-            calculateControl.OtherControls.Add(informationControl);
-            historyControl.OtherControls.Add(calculateControl);
-            historyControl.OtherControls.Add(informationControl);
-            informationControl.OtherControls.Add(calculateControl);
-            informationControl.OtherControls.Add(historyControl);
+            calculateControl.HistoryControl = historyControl; //Передача ссылок контролам на другие контролы для скрытия/отображения на форме
+            calculateControl.InformationControl = informationControl;
+            historyControl.CalculateControl = calculateControl;
+            informationControl.CalculateControl = calculateControl;
         }
 
         private void FormSCSCalc_Load(object sender, EventArgs e)

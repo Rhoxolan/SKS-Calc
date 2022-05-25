@@ -13,14 +13,23 @@ namespace SKS_Calc
     public partial class HistoryControl : UserControl
     {
         private BindingList<Configuration> configurations;
-
-        public List<UserControl> OtherControls { get; set; }
+        public CalculateControl? CalculateControl { get; set; }
 
         public HistoryControl(BindingList<Configuration> configurations)
         {
             InitializeComponent();
-            OtherControls = new();
+            CalculateControl = null;
             this.configurations = configurations;
+            listBoxConfigurationsList.DataSource = configurations;
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            if (CalculateControl != null)
+            {
+                this.Visible = false;
+                CalculateControl.Visible = true;
+            }
         }
     }
 }

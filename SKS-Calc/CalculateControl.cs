@@ -13,14 +13,15 @@ namespace SKS_Calc
     public partial class CalculateControl : UserControl
     {
         private BindingList<Configuration> configurations;
-
-        public List<UserControl> OtherControls { get; set; }
+        public HistoryControl? HistoryControl { get; set; }
+        public InformationControl? InformationControl { get; set; }
 
         public CalculateControl(BindingList<Configuration> configurations)
         {
             InitializeComponent();
+            HistoryControl = null;
+            InformationControl = null;
             this.configurations = configurations;
-            OtherControls = new();
             this.Load += OutputBlockCleaner; //Устанавливаем начальное отображение блока вывода
             numericUpDownMinPermamentLink.ValueChanged += OutputBlockCleaner; //Очищаем блок вывода при любых изменениях
             numericUpDownMaxPermamentLink.ValueChanged += OutputBlockCleaner;
@@ -73,6 +74,24 @@ namespace SKS_Calc
                 textBoxOutputHankQuantity.Enabled = false;
             }
             buttonOutputSaveToTxt.Enabled = false;
+        }
+
+        private void buttonHistory_Click(object sender, EventArgs e)
+        {
+            if (HistoryControl != null)
+            {
+                this.Visible = false;
+                HistoryControl.Visible = true;
+            }
+        }
+
+        private void buttonInfo_Click(object sender, EventArgs e)
+        {
+            if (InformationControl != null)
+            {
+                this.Visible = false;
+                InformationControl.Visible = true;
+            }
         }
     }
 }

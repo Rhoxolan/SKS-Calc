@@ -489,6 +489,7 @@
             this.buttonInfo.TabIndex = 15;
             this.buttonInfo.Text = "Информация";
             this.buttonInfo.UseVisualStyleBackColor = true;
+            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
             // 
             // buttonHistory
             // 
@@ -498,6 +499,7 @@
             this.buttonHistory.TabIndex = 16;
             this.buttonHistory.Text = "История";
             this.buttonHistory.UseVisualStyleBackColor = true;
+            this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
             // 
             // CalculateControl
             // 
