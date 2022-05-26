@@ -16,15 +16,15 @@ namespace SKS_Calc
         private BindingList<Configuration> configurations;
         private string docPath;
 
-        public HistoryControl? HistoryControl { get; set; }
+        public UserControl? ParentControl { get; set; }
 
-        public InformationControl? InformationControl { get; set; }
+        public List<UserControl>? ChildControls { get; set; }
 
         public CalculateControl(BindingList<Configuration> configurations, string docPath)
         {
             InitializeComponent();
-            HistoryControl = null;
-            InformationControl = null;
+            ParentControl = null;
+            ChildControls = new();
             this.configurations = configurations;
             this.docPath = docPath;
             this.Load += OutputBlockCleaner; //Устанавливаем начальное отображение блока вывода
@@ -56,19 +56,31 @@ namespace SKS_Calc
 
         private void buttonHistory_Click(object sender, EventArgs e)
         {
-            if (HistoryControl != null)
+            if(ChildControls != null && ChildControls.Count > 0)
             {
-                this.Visible = false;
-                HistoryControl.Visible = true;
+                foreach (var c in ChildControls)
+                {
+                    if(c is HistoryControl)
+                    {
+                        this.Visible = false;
+                        c.Visible = true;
+                    }
+                }
             }
         }
 
         private void buttonInfo_Click(object sender, EventArgs e)
         {
-            if (InformationControl != null)
+            if (ChildControls != null && ChildControls.Count > 0)
             {
-                this.Visible = false;
-                InformationControl.Visible = true;
+                foreach (var c in ChildControls)
+                {
+                    if (c is InformationControl)
+                    {
+                        this.Visible = false;
+                        c.Visible = true;
+                    }
+                }
             }
         }
 

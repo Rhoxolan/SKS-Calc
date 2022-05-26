@@ -16,12 +16,15 @@ namespace SKS_Calc
         private BindingList<Configuration> configurations;
         private string docPath;
 
-        public CalculateControl? CalculateControl { get; set; }
+        public UserControl? ParentControl { get; set; }
+
+        public List<UserControl>? ChildControls { get; set; }
 
         public HistoryControl(BindingList<Configuration> configurations, string docPath)
         {
             InitializeComponent();
-            CalculateControl = null;
+            ParentControl = null;
+            ChildControls = new();
             this.configurations = configurations;
             this.docPath = docPath;
             listBoxConfigurationsList.DataSource = configurations;
@@ -29,10 +32,10 @@ namespace SKS_Calc
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            if (CalculateControl != null)
+            if (ParentControl != null)
             {
                 this.Visible = false;
-                CalculateControl.Visible = true;
+                ParentControl.Visible = true;
             }
         }
 

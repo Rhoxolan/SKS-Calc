@@ -12,20 +12,28 @@ namespace SKS_Calc
 {
     public partial class InformationControl : UserControl
     {
-        public CalculateControl? CalculateControl { get; set; }
+        private BindingList<Configuration> configurations;
+        private string docPath;
 
-        public InformationControl()
+        public UserControl? ParentControl { get; set; }
+
+        public List<UserControl>? ChildControls { get; set; }
+
+        public InformationControl(BindingList<Configuration> configurations, string docPath)
         {
             InitializeComponent();
-            CalculateControl = null;
+            ParentControl = null;
+            ChildControls = new();
+            this.configurations = configurations;
+            this.docPath = docPath;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            if (CalculateControl != null)
+            if (ParentControl != null)
             {
                 this.Visible = false;
-                CalculateControl.Visible = true;
+                ParentControl.Visible = true;
             }
         }
 

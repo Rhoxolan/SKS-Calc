@@ -20,11 +20,11 @@ namespace SKS_Calc
             Loader();
             calculateControl = new(configurations, docPath); //Передача контролам ссылки на BindingList
             historyControl = new(configurations, docPath);
-            informationControl = new();
-            calculateControl.HistoryControl = historyControl; //Передача ссылок контролам на другие контролы для скрытия/отображения на форме
-            calculateControl.InformationControl = informationControl;
-            historyControl.CalculateControl = calculateControl;
-            informationControl.CalculateControl = calculateControl;
+            informationControl = new(configurations, docPath);
+            calculateControl.ChildControls.Add(historyControl); //Передача ссылок контролам на другие контролы для скрытия / отображения на форме
+            calculateControl.ChildControls.Add(informationControl);
+            historyControl.ParentControl = calculateControl;
+            informationControl.ParentControl = calculateControl;
         }
 
         private void FormSCSCalc_Load(object sender, EventArgs e)
