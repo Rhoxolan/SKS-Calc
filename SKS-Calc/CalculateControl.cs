@@ -151,5 +151,26 @@ namespace SKS_Calc
             }
             buttonOutputSaveToTxt.Enabled = false;
         }
+
+        private void buttonOutputSaveToTxt_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new();
+            sfd.Filter = "Текстовые документы(*.txt)|*.txt";
+            sfd.FileName = "Конфигурация СКС " +
+                configurations[configurations.Count - 1].RecordTime.ToString() + ".txt";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                FileStream fs = new(sfd.FileName, FileMode.Create);
+                using (StreamWriter sw = new(fs))
+                {
+                    sw.WriteLine($"Конфигурация создана в приложении SCS-Calc{Environment.NewLine}{Environment.NewLine}" +
+                        $"Дата записи конфигурации: {configurations[^1].RecordTime.ToString()}" +
+                        $"Наименьшая длина постоянного линка (Permament Link):" +
+                        $"{configurations[^1].MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                        $"Наибольшая длина постоянного линка (Permament Link): " +
+                        $"{configurations[^1].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}");
+                }
+            }
+        }
     }
 }

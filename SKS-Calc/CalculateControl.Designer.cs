@@ -307,6 +307,7 @@
             this.buttonOutputSaveToTxt.TabIndex = 15;
             this.buttonOutputSaveToTxt.Text = "Сохранить в TXT";
             this.buttonOutputSaveToTxt.UseVisualStyleBackColor = true;
+            this.buttonOutputSaveToTxt.Click += new System.EventHandler(this.buttonOutputSaveToTxt_Click);
             // 
             // labelOutputTotalСableQuantity
             // 
