@@ -16,7 +16,7 @@ namespace SKS_Calc
         {
             InitializeComponent();
             folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "SCS-Calc Data Folder");
-            docPath = Path.Combine(folderPath, "SCS-Calc_Data.json");
+            docPath = Path.Combine(folderPath, "SCS-CalcData.json");
             Loader();
             calculateControl = new(configurations, docPath); //Передача контролам ссылки на BindingList
             historyControl = new(configurations, docPath);
