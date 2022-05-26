@@ -101,5 +101,58 @@ namespace SKS_Calc
                 }
             }
         }
+
+        private void buttonOutputSaveToTxt_Click(object sender, EventArgs e)
+        {
+            if (listBoxConfigurationsList.SelectedIndex != -1)
+            {
+                SaveFileDialog sfd = new();
+                sfd.Filter = "Текстовые документы(*.txt)|*.txt";
+                sfd.FileName = $"Конфигурация СКС {configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.ToShortDateString()} " +
+                    $"{configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.Hour}.{configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.Minute}." +
+                    $"{configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.Second}.txt";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    FileStream fs = new(sfd.FileName, FileMode.Create);
+                    using (StreamWriter sw = new(fs))
+                    {
+                        if (configurations[listBoxConfigurationsList.SelectedIndex].СableQuantity != null && configurations[listBoxConfigurationsList.SelectedIndex].HankQuantity != null)
+                        {
+                            sw.WriteLine($"Конфигурация создана в приложении SCS-Calc{Environment.NewLine}{Environment.NewLine}" +
+                                $"Дата записи конфигурации: {configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.ToString()}{Environment.NewLine}" +
+                                $"Наименьшая длина постоянного линка (Permament Link):" +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                                $"Наибольшая длина постоянного линка (Permament Link): " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                                $"Средняя длина постоянного линка (Permament Link): " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                                $"Количество портов на 1 рабочее место: " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfPorts}{Environment.NewLine}" +
+                                $"Необходимое количество кабеля: " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].СableQuantity?.ToString("F" + 2)} м.{Environment.NewLine}" +
+                                $"Необходимое количество бухт кабеля: " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].HankQuantity?.ToString("F" + 2)} м.{Environment.NewLine}" +
+                                $"Итоговое необходимое количество кабеля: " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].TotalСableQuantity.ToString("F" + 2)} м.{Environment.NewLine}");
+                        }
+                        else
+                        {
+                            sw.WriteLine($"Конфигурация создана в приложении SCS-Calc{Environment.NewLine}{Environment.NewLine}" +
+                                $"Дата записи конфигурации: {configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.ToString()}{Environment.NewLine}" +
+                                $"Наименьшая длина постоянного линка (Permament Link):" +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                                $"Наибольшая длина постоянного линка (Permament Link): " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                                $"Средняя длина постоянного линка (Permament Link): " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                                $"Количество портов на 1 рабочее место: " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfPorts}{Environment.NewLine}" +
+                                $"Итоговое необходимое количество кабеля: " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].TotalСableQuantity.ToString("F" + 2)} м.{Environment.NewLine}");
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -156,19 +156,48 @@ namespace SKS_Calc
         {
             SaveFileDialog sfd = new();
             sfd.Filter = "Текстовые документы(*.txt)|*.txt";
-            sfd.FileName = "Конфигурация СКС " +
-                configurations[configurations.Count - 1].RecordTime.ToString() + ".txt";
+            sfd.FileName = $"Конфигурация СКС {configurations[^1].RecordTime.ToShortDateString()} " +
+                $"{configurations[^1].RecordTime.Hour}.{configurations[^1].RecordTime.Minute}." +
+                $"{configurations[^1].RecordTime.Second}.txt";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 FileStream fs = new(sfd.FileName, FileMode.Create);
                 using (StreamWriter sw = new(fs))
                 {
-                    sw.WriteLine($"Конфигурация создана в приложении SCS-Calc{Environment.NewLine}{Environment.NewLine}" +
-                        $"Дата записи конфигурации: {configurations[^1].RecordTime.ToString()}" +
-                        $"Наименьшая длина постоянного линка (Permament Link):" +
-                        $"{configurations[^1].MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                        $"Наибольшая длина постоянного линка (Permament Link): " +
-                        $"{configurations[^1].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}");
+                    if (configurations[^1].СableQuantity != null && configurations[^1].HankQuantity != null)
+                    {
+                        sw.WriteLine($"Конфигурация создана в приложении SCS-Calc{Environment.NewLine}{Environment.NewLine}" +
+                            $"Дата записи конфигурации: {configurations[^1].RecordTime.ToString()}{Environment.NewLine}" +
+                            $"Наименьшая длина постоянного линка (Permament Link):" +
+                            $"{configurations[^1].MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                            $"Наибольшая длина постоянного линка (Permament Link): " +
+                            $"{configurations[^1].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                            $"Средняя длина постоянного линка (Permament Link): " +
+                            $"{configurations[^1].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                            $"Количество портов на 1 рабочее место: " +
+                            $"{configurations[^1].NumberOfPorts}{Environment.NewLine}" +
+                            $"Необходимое количество кабеля: " +
+                            $"{configurations[^1].СableQuantity?.ToString("F" + 2)} м.{Environment.NewLine}" +
+                            $"Необходимое количество бухт кабеля: " +
+                            $"{configurations[^1].HankQuantity?.ToString("F" + 2)} м.{Environment.NewLine}" +
+                            $"Итоговое необходимое количество кабеля: " +
+                            $"{configurations[^1].TotalСableQuantity.ToString("F" + 2)} м.{Environment.NewLine}");
+                    }
+                    else
+                    {
+                        sw.WriteLine($"Конфигурация создана в приложении SCS-Calc{Environment.NewLine}{Environment.NewLine}" +
+                            $"Дата записи конфигурации: {configurations[^1].RecordTime.ToString()}{Environment.NewLine}" +
+                            $"Наименьшая длина постоянного линка (Permament Link):" +
+                            $"{configurations[^1].MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                            $"Наибольшая длина постоянного линка (Permament Link): " +
+                            $"{configurations[^1].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                            $"Средняя длина постоянного линка (Permament Link): " +
+                            $"{configurations[^1].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                            $"Количество портов на 1 рабочее место: " +
+                            $"{configurations[^1].NumberOfPorts}{Environment.NewLine}" +
+                            $"Итоговое необходимое количество кабеля: " +
+                            $"{configurations[^1].TotalСableQuantity.ToString("F" + 2)} м.{Environment.NewLine}");
+                    }
                 }
             }
         }

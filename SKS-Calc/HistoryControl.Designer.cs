@@ -94,6 +94,7 @@
             this.buttonOutputSaveToTxt.TabIndex = 21;
             this.buttonOutputSaveToTxt.Text = "Сохранить в TXT";
             this.buttonOutputSaveToTxt.UseVisualStyleBackColor = true;
+            this.buttonOutputSaveToTxt.Click += new System.EventHandler(this.buttonOutputSaveToTxt_Click);
             // 
             // HistoryControl
             // 
