@@ -13,7 +13,9 @@ namespace SKS_Calc
     public partial class CalculateControl : UserControl
     {
         private BindingList<Configuration> configurations;
+
         public HistoryControl? HistoryControl { get; set; }
+
         public InformationControl? InformationControl { get; set; }
 
         public CalculateControl(BindingList<Configuration> configurations)
