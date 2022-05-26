@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,18 +14,21 @@ namespace SKS_Calc
     public partial class CalculateControl : UserControl
     {
         private BindingList<Configuration> configurations;
+        private string docPath;
 
         public HistoryControl? HistoryControl { get; set; }
 
         public InformationControl? InformationControl { get; set; }
 
-        public CalculateControl(BindingList<Configuration> configurations)
+        public CalculateControl(BindingList<Configuration> configurations, string docPath)
         {
             InitializeComponent();
             HistoryControl = null;
             InformationControl = null;
             this.configurations = configurations;
+            this.docPath = docPath;
             this.Load += OutputBlockCleaner; //Устанавливаем начальное отображение блока вывода
+            buttonCalculate.Click += Saver; //Добавляем обработчик для сохранения данных списка конфигураций
             numericUpDownMinPermamentLink.ValueChanged += OutputBlockCleaner; //Очищаем блок вывода при любых изменениях
             numericUpDownMaxPermamentLink.ValueChanged += OutputBlockCleaner;
             numericUpDownNumberOfWorkplaces.ValueChanged += OutputBlockCleaner;
@@ -123,37 +127,6 @@ namespace SKS_Calc
             buttonOutputSaveToTxt.Enabled = true;
         }
 
-        private void OutputBlockCleaner(object? sender, EventArgs e)
-        {
-            textBoxOutputMinPermamentLink.Text = string.Empty;
-            textBoxOutputMaxPermamentLink.Text = string.Empty;
-            textBoxOutputAveragePermamentLink.Text = string.Empty;
-            textBoxOutputNumberOfPorts.Text = string.Empty;
-            textBoxOutputСableQuantity.Text = string.Empty;
-            textBoxOutputHankQuantity.Text = string.Empty;
-            textBoxOutputTotalСableQuantity.Text = string.Empty;
-            numericUpDownCableHankMeterage.Enabled = false;
-            if (checkBoxCableHankMeterage.Checked)
-            {
-                labelOutputСableQuantity.Enabled = true;
-                textBoxOutputСableQuantity.Enabled = true;
-                labelMeters7.Enabled = true;
-                labelOutputHankQuantity.Enabled = true;
-                textBoxOutputHankQuantity.Enabled = true;
-                numericUpDownCableHankMeterage.Enabled = true;
-            }
-            if (!checkBoxCableHankMeterage.Checked)
-            {
-                labelOutputСableQuantity.Enabled = false;
-                textBoxOutputСableQuantity.Enabled = false;
-                labelMeters7.Enabled = false;
-                labelOutputHankQuantity.Enabled = false;
-                textBoxOutputHankQuantity.Enabled = false;
-                numericUpDownCableHankMeterage.Enabled = false;
-            }
-            buttonOutputSaveToTxt.Enabled = false;
-        }
-
         private void buttonOutputSaveToTxt_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new();
@@ -201,6 +174,45 @@ namespace SKS_Calc
                             $"{configurations[^1].TotalСableQuantity.ToString("F" + 2)} м.{Environment.NewLine}");
                     }
                 }
+            }
+        }
+
+        private void OutputBlockCleaner(object? sender, EventArgs e)
+        {
+            textBoxOutputMinPermamentLink.Text = string.Empty;
+            textBoxOutputMaxPermamentLink.Text = string.Empty;
+            textBoxOutputAveragePermamentLink.Text = string.Empty;
+            textBoxOutputNumberOfPorts.Text = string.Empty;
+            textBoxOutputСableQuantity.Text = string.Empty;
+            textBoxOutputHankQuantity.Text = string.Empty;
+            textBoxOutputTotalСableQuantity.Text = string.Empty;
+            numericUpDownCableHankMeterage.Enabled = false;
+            if (checkBoxCableHankMeterage.Checked)
+            {
+                labelOutputСableQuantity.Enabled = true;
+                textBoxOutputСableQuantity.Enabled = true;
+                labelMeters7.Enabled = true;
+                labelOutputHankQuantity.Enabled = true;
+                textBoxOutputHankQuantity.Enabled = true;
+                numericUpDownCableHankMeterage.Enabled = true;
+            }
+            if (!checkBoxCableHankMeterage.Checked)
+            {
+                labelOutputСableQuantity.Enabled = false;
+                textBoxOutputСableQuantity.Enabled = false;
+                labelMeters7.Enabled = false;
+                labelOutputHankQuantity.Enabled = false;
+                textBoxOutputHankQuantity.Enabled = false;
+                numericUpDownCableHankMeterage.Enabled = false;
+            }
+            buttonOutputSaveToTxt.Enabled = false;
+        }
+
+        private void Saver(object? sender, EventArgs e) //Обработчик для сохранения данных списка конфигураций
+        {
+            using (FileStream fs = new(docPath, FileMode.Create))
+            {
+                JsonSerializer.Serialize(fs, configurations);
             }
         }
     }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,14 +14,16 @@ namespace SKS_Calc
     public partial class HistoryControl : UserControl
     {
         private BindingList<Configuration> configurations;
+        private string docPath;
 
         public CalculateControl? CalculateControl { get; set; }
 
-        public HistoryControl(BindingList<Configuration> configurations)
+        public HistoryControl(BindingList<Configuration> configurations, string docPath)
         {
             InitializeComponent();
             CalculateControl = null;
             this.configurations = configurations;
+            this.docPath = docPath;
             listBoxConfigurationsList.DataSource = configurations;
         }
 
@@ -81,7 +84,10 @@ namespace SKS_Calc
                 {
                     configurations.RemoveAt(listBoxConfigurationsList.SelectedIndex);
                     textBoxShowConfigurationDetails.Text = String.Empty;
-                    //Saver(configurations);
+                    using (FileStream fs = new(docPath, FileMode.Create))
+                    {
+                        JsonSerializer.Serialize(fs, configurations);
+                    }
                 }
             }
         }
@@ -98,7 +104,10 @@ namespace SKS_Calc
                         configurations.RemoveAt(i);
                     }
                     textBoxShowConfigurationDetails.Text = String.Empty;
-                    //Saver(configurations);
+                    using (FileStream fs = new(docPath, FileMode.Create))
+                    {
+                        JsonSerializer.Serialize(fs, configurations);
+                    }
                 }
             }
         }
