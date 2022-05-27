@@ -67,7 +67,7 @@
             this.labelAuthorName.Size = new System.Drawing.Size(160, 17);
             this.labelAuthorName.TabIndex = 22;
             this.labelAuthorName.Text = "Павел Бацемакин, 2022 г.";
-            this.toolTipHelp.SetToolTip(this.labelAuthorName, "github.com/Rhoxolan");
+            this.toolTipHelp.SetToolTip(this.labelAuthorName, "github.com/Rhoxolan\r\nКликните два раза, чтобы перейти");
             this.labelAuthorName.DoubleClick += new System.EventHandler(this.labelAuthorName_DoubleClick);
             // 
             // toolTipHelp
