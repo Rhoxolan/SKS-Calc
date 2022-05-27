@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculateControl));
             this.labelMinPermamentLink = new System.Windows.Forms.Label();
             this.numericUpDownMinPermamentLink = new System.Windows.Forms.NumericUpDown();
             this.labelMaxPermamentLink = new System.Windows.Forms.Label();
@@ -65,6 +67,7 @@
             this.labelOutputMinPermamentLink = new System.Windows.Forms.Label();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonHistory = new System.Windows.Forms.Button();
+            this.toolTipHelp = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfWorkplaces)).BeginInit();
@@ -81,6 +84,7 @@
             this.labelMinPermamentLink.Size = new System.Drawing.Size(229, 15);
             this.labelMinPermamentLink.TabIndex = 0;
             this.labelMinPermamentLink.Text = "Наименьшая длина постоянного линка:";
+            this.toolTipHelp.SetToolTip(this.labelMinPermamentLink, resources.GetString("labelMinPermamentLink.ToolTip"));
             // 
             // numericUpDownMinPermamentLink
             // 
@@ -99,6 +103,7 @@
             this.numericUpDownMinPermamentLink.Name = "numericUpDownMinPermamentLink";
             this.numericUpDownMinPermamentLink.Size = new System.Drawing.Size(120, 23);
             this.numericUpDownMinPermamentLink.TabIndex = 1;
+            this.toolTipHelp.SetToolTip(this.numericUpDownMinPermamentLink, resources.GetString("numericUpDownMinPermamentLink.ToolTip"));
             this.numericUpDownMinPermamentLink.Value = new decimal(new int[] {
             1,
             0,
@@ -113,6 +118,7 @@
             this.labelMaxPermamentLink.Size = new System.Drawing.Size(228, 15);
             this.labelMaxPermamentLink.TabIndex = 2;
             this.labelMaxPermamentLink.Text = "Наибольшая длина постоянного линка:";
+            this.toolTipHelp.SetToolTip(this.labelMaxPermamentLink, resources.GetString("labelMaxPermamentLink.ToolTip"));
             // 
             // numericUpDownMaxPermamentLink
             // 
@@ -131,6 +137,7 @@
             this.numericUpDownMaxPermamentLink.Name = "numericUpDownMaxPermamentLink";
             this.numericUpDownMaxPermamentLink.Size = new System.Drawing.Size(120, 23);
             this.numericUpDownMaxPermamentLink.TabIndex = 3;
+            this.toolTipHelp.SetToolTip(this.numericUpDownMaxPermamentLink, resources.GetString("numericUpDownMaxPermamentLink.ToolTip"));
             this.numericUpDownMaxPermamentLink.Value = new decimal(new int[] {
             1,
             0,
@@ -145,6 +152,7 @@
             this.labelNumberOfWorkplaces.Size = new System.Drawing.Size(154, 15);
             this.labelNumberOfWorkplaces.TabIndex = 4;
             this.labelNumberOfWorkplaces.Text = "Количество рабочих мест:";
+            this.toolTipHelp.SetToolTip(this.labelNumberOfWorkplaces, "Пожалуйста, введите количество рабочих мест");
             // 
             // numericUpDownNumberOfWorkplaces
             // 
@@ -162,6 +170,7 @@
             this.numericUpDownNumberOfWorkplaces.Name = "numericUpDownNumberOfWorkplaces";
             this.numericUpDownNumberOfWorkplaces.Size = new System.Drawing.Size(120, 23);
             this.numericUpDownNumberOfWorkplaces.TabIndex = 5;
+            this.toolTipHelp.SetToolTip(this.numericUpDownNumberOfWorkplaces, "Пожалуйста, введите количество рабочих мест");
             this.numericUpDownNumberOfWorkplaces.Value = new decimal(new int[] {
             1,
             0,
@@ -176,6 +185,9 @@
             this.labelNumberOfPorts.Size = new System.Drawing.Size(227, 15);
             this.labelNumberOfPorts.TabIndex = 6;
             this.labelNumberOfPorts.Text = "Количество портов на 1 рабочее место:";
+            this.toolTipHelp.SetToolTip(this.labelNumberOfPorts, "Пожалуйста, введите количество портов на 1 рабочее место.\r\nНапоминаем, что соглас" +
+        "но стандарту ISO/IEC 11801 на 1 рабочее место должно быть выделено не менее 2-х " +
+        "портов");
             // 
             // numericUpDownNumberOfPorts
             // 
@@ -193,6 +205,9 @@
             this.numericUpDownNumberOfPorts.Name = "numericUpDownNumberOfPorts";
             this.numericUpDownNumberOfPorts.Size = new System.Drawing.Size(120, 23);
             this.numericUpDownNumberOfPorts.TabIndex = 7;
+            this.toolTipHelp.SetToolTip(this.numericUpDownNumberOfPorts, "Пожалуйста, введите количество портов на 1 рабочее место.\r\nНапоминаем, что соглас" +
+        "но стандарту ISO/IEC 11801 на 1 рабочее место должно быть выделено не менее 2-х " +
+        "портов");
             this.numericUpDownNumberOfPorts.Value = new decimal(new int[] {
             1,
             0,
@@ -225,6 +240,9 @@
             this.checkBoxCableHankMeterage.Size = new System.Drawing.Size(156, 19);
             this.checkBoxCableHankMeterage.TabIndex = 10;
             this.checkBoxCableHankMeterage.Text = "Метраж кабеля в бухте:";
+            this.toolTipHelp.SetToolTip(this.checkBoxCableHankMeterage, "Отметьте, если хотите ввести метраж кабеля в 1-й кабельной катушке (бухте).\r\nНеоб" +
+        "ходимое количество кабеля будет рассчитано с учетом количества кабельных проброс" +
+        "ов, которые можно сделать с 1-й бухты");
             this.checkBoxCableHankMeterage.UseVisualStyleBackColor = true;
             this.checkBoxCableHankMeterage.CheckedChanged += new System.EventHandler(this.checkBoxCableHankMeterage_CheckedChanged);
             // 
@@ -245,6 +263,9 @@
             this.numericUpDownCableHankMeterage.Name = "numericUpDownCableHankMeterage";
             this.numericUpDownCableHankMeterage.Size = new System.Drawing.Size(120, 23);
             this.numericUpDownCableHankMeterage.TabIndex = 11;
+            this.toolTipHelp.SetToolTip(this.numericUpDownCableHankMeterage, "Введите метраж кабеля в 1-й кабельной катушке (бухте).\r\nНеобходимое количество ка" +
+        "беля будет рассчитано с учетом количества кабельных пробросов, которые можно сде" +
+        "лать с 1-й бухты");
             this.numericUpDownCableHankMeterage.Value = new decimal(new int[] {
             1,
             0,
@@ -267,6 +288,8 @@
             this.buttonCalculate.Size = new System.Drawing.Size(105, 23);
             this.buttonCalculate.TabIndex = 13;
             this.buttonCalculate.Text = "Рассчитать";
+            this.toolTipHelp.SetToolTip(this.buttonCalculate, "Рассчитать конфигурацию. Расчёт будет автоматически сохранен в истории расчётов.\r" +
+        "\nВы в любой момент сможете посмотреть или удалить его");
             this.buttonCalculate.UseVisualStyleBackColor = true;
             this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
@@ -347,6 +370,8 @@
             this.labelOutputHankQuantity.Size = new System.Drawing.Size(225, 15);
             this.labelOutputHankQuantity.TabIndex = 22;
             this.labelOutputHankQuantity.Text = "Необходимое количество бухт кабеля: ";
+            this.toolTipHelp.SetToolTip(this.labelOutputHankQuantity, "Необходимое количество кабельных катушек (бухт). Рассчитывается с учётом \r\nколиче" +
+        "ства кабельных пробросов, которые можно сделать с 1-й бухты");
             // 
             // textBoxOutputHankQuantity
             // 
@@ -356,6 +381,8 @@
             this.textBoxOutputHankQuantity.ReadOnly = true;
             this.textBoxOutputHankQuantity.Size = new System.Drawing.Size(100, 23);
             this.textBoxOutputHankQuantity.TabIndex = 21;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputHankQuantity, "Необходимое количество кабельных катушек (бухт). Рассчитывается с учётом \r\nколиче" +
+        "ства кабельных пробросов, которые можно сделать с 1-й бухты");
             // 
             // labelOutputСableQuantity
             // 
@@ -365,6 +392,8 @@
             this.labelOutputСableQuantity.Size = new System.Drawing.Size(198, 15);
             this.labelOutputСableQuantity.TabIndex = 20;
             this.labelOutputСableQuantity.Text = "Необходимое количество кабеля: ";
+            this.toolTipHelp.SetToolTip(this.labelOutputСableQuantity, "Необходимое количество кабеля. Рассчитывается общая длина необходимого кабеля без" +
+        " \r\nучета метража кабеля в кабельных катушках (бухтах)");
             // 
             // labelMeters7
             // 
@@ -383,6 +412,8 @@
             this.textBoxOutputСableQuantity.ReadOnly = true;
             this.textBoxOutputСableQuantity.Size = new System.Drawing.Size(100, 23);
             this.textBoxOutputСableQuantity.TabIndex = 18;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputСableQuantity, "Необходимое количество кабеля. Рассчитывается общая длина необходимого кабеля без" +
+        " \r\nучета метража кабеля в кабельных катушках (бухтах)");
             // 
             // labelOutputNumberOfPorts
             // 
@@ -392,6 +423,7 @@
             this.labelOutputNumberOfPorts.Size = new System.Drawing.Size(227, 15);
             this.labelOutputNumberOfPorts.TabIndex = 17;
             this.labelOutputNumberOfPorts.Text = "Количество портов на 1 рабочее место:";
+            this.toolTipHelp.SetToolTip(this.labelOutputNumberOfPorts, "Введённое вами количество портов на 1 рабочее место");
             // 
             // textBoxOutputNumberOfPorts
             // 
@@ -401,6 +433,7 @@
             this.textBoxOutputNumberOfPorts.ReadOnly = true;
             this.textBoxOutputNumberOfPorts.Size = new System.Drawing.Size(100, 23);
             this.textBoxOutputNumberOfPorts.TabIndex = 16;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputNumberOfPorts, "Введённое вами количество портов на 1 рабочее место");
             // 
             // labelOutputAveragePermamentLink
             // 
@@ -410,6 +443,7 @@
             this.labelOutputAveragePermamentLink.Size = new System.Drawing.Size(300, 15);
             this.labelOutputAveragePermamentLink.TabIndex = 15;
             this.labelOutputAveragePermamentLink.Text = "Средняя длина постоянного линка (Permament Link):";
+            this.toolTipHelp.SetToolTip(this.labelOutputAveragePermamentLink, resources.GetString("labelOutputAveragePermamentLink.ToolTip"));
             // 
             // labelMeters6
             // 
@@ -428,6 +462,7 @@
             this.textBoxOutputAveragePermamentLink.ReadOnly = true;
             this.textBoxOutputAveragePermamentLink.Size = new System.Drawing.Size(100, 23);
             this.textBoxOutputAveragePermamentLink.TabIndex = 13;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputAveragePermamentLink, resources.GetString("textBoxOutputAveragePermamentLink.ToolTip"));
             // 
             // labelOutputMaxPermamentLink
             // 
@@ -437,6 +472,7 @@
             this.labelOutputMaxPermamentLink.Size = new System.Drawing.Size(326, 15);
             this.labelOutputMaxPermamentLink.TabIndex = 12;
             this.labelOutputMaxPermamentLink.Text = "Наибольшая длина постоянного линка (Permament Link):";
+            this.toolTipHelp.SetToolTip(this.labelOutputMaxPermamentLink, "Введённое вами значение наибольшей длины постоянного линка (Permament Link)");
             // 
             // labelMeters5
             // 
@@ -455,6 +491,7 @@
             this.textBoxOutputMaxPermamentLink.ReadOnly = true;
             this.textBoxOutputMaxPermamentLink.Size = new System.Drawing.Size(100, 23);
             this.textBoxOutputMaxPermamentLink.TabIndex = 10;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputMaxPermamentLink, "Введённое вами значение наибольшей длины постоянного линка (Permament Link)");
             // 
             // labelMeters4
             // 
@@ -473,6 +510,7 @@
             this.textBoxOutputMinPermamentLink.ReadOnly = true;
             this.textBoxOutputMinPermamentLink.Size = new System.Drawing.Size(100, 23);
             this.textBoxOutputMinPermamentLink.TabIndex = 2;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputMinPermamentLink, "Введённое вами значение наименьшей длины постоянного линка (Permament Link)");
             // 
             // labelOutputMinPermamentLink
             // 
@@ -482,6 +520,7 @@
             this.labelOutputMinPermamentLink.Size = new System.Drawing.Size(327, 15);
             this.labelOutputMinPermamentLink.TabIndex = 1;
             this.labelOutputMinPermamentLink.Text = "Наименьшая длина постоянного линка (Permament Link):";
+            this.toolTipHelp.SetToolTip(this.labelOutputMinPermamentLink, "Введённое вами значение наименьшей длины постоянного линка (Permament Link)");
             // 
             // buttonInfo
             // 
@@ -490,6 +529,7 @@
             this.buttonInfo.Size = new System.Drawing.Size(105, 23);
             this.buttonInfo.TabIndex = 15;
             this.buttonInfo.Text = "Информация";
+            this.toolTipHelp.SetToolTip(this.buttonInfo, "Просмотреть информацию о приложении и получить помощь в работе с приложением");
             this.buttonInfo.UseVisualStyleBackColor = true;
             this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
             // 
@@ -500,6 +540,9 @@
             this.buttonHistory.Size = new System.Drawing.Size(105, 23);
             this.buttonHistory.TabIndex = 16;
             this.buttonHistory.Text = "История";
+            this.toolTipHelp.SetToolTip(this.buttonHistory, "Просмотреть историю расчётов конфигураций. В режиме истории вы сможете просматрив" +
+        "ать или удалять\r\nпредыдущие конфигурации, а так же сохранять в TXT любую выбранн" +
+        "ую предыдущую конфигурацию");
             this.buttonHistory.UseVisualStyleBackColor = true;
             this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
             // 
@@ -579,5 +622,6 @@
         private TextBox textBoxOutputСableQuantity;
         private Button buttonInfo;
         private Button buttonHistory;
+        private ToolTip toolTipHelp;
     }
 }
