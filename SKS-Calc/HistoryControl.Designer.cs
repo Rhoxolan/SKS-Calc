@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listBoxConfigurationsList = new System.Windows.Forms.ListBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonRemoveAll = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.textBoxShowConfigurationDetails = new System.Windows.Forms.TextBox();
             this.buttonOutputSaveToTxt = new System.Windows.Forms.Button();
+            this.toolTipHelp = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // listBoxConfigurationsList
@@ -53,6 +55,7 @@
             this.buttonDelete.Size = new System.Drawing.Size(105, 23);
             this.buttonDelete.TabIndex = 17;
             this.buttonDelete.Text = "Удалить";
+            this.toolTipHelp.SetToolTip(this.buttonDelete, "Удалить выбранную конфигурацию");
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
@@ -63,6 +66,7 @@
             this.buttonRemoveAll.Size = new System.Drawing.Size(105, 23);
             this.buttonRemoveAll.TabIndex = 18;
             this.buttonRemoveAll.Text = "Удалить всё";
+            this.toolTipHelp.SetToolTip(this.buttonRemoveAll, "Удалить ВСЕ конфигурации");
             this.buttonRemoveAll.UseVisualStyleBackColor = true;
             this.buttonRemoveAll.Click += new System.EventHandler(this.buttonRemoveAll_Click);
             // 
@@ -73,6 +77,7 @@
             this.buttonBack.Size = new System.Drawing.Size(105, 23);
             this.buttonBack.TabIndex = 19;
             this.buttonBack.Text = "Назад";
+            this.toolTipHelp.SetToolTip(this.buttonBack, "Вернуться в предыдущий режим");
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
@@ -93,8 +98,13 @@
             this.buttonOutputSaveToTxt.Size = new System.Drawing.Size(105, 23);
             this.buttonOutputSaveToTxt.TabIndex = 21;
             this.buttonOutputSaveToTxt.Text = "Сохранить в TXT";
+            this.toolTipHelp.SetToolTip(this.buttonOutputSaveToTxt, "Сохранить конфигурацию в текстовый документ (TXT)");
             this.buttonOutputSaveToTxt.UseVisualStyleBackColor = true;
             this.buttonOutputSaveToTxt.Click += new System.EventHandler(this.buttonOutputSaveToTxt_Click);
+            // 
+            // toolTipHelp
+            // 
+            this.toolTipHelp.AutomaticDelay = 1000;
             // 
             // HistoryControl
             // 
@@ -122,5 +132,6 @@
         private Button buttonBack;
         private TextBox textBoxShowConfigurationDetails;
         private Button buttonOutputSaveToTxt;
+        private ToolTip toolTipHelp;
     }
 }

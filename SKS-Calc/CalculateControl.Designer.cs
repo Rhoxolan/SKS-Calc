@@ -329,6 +329,7 @@
             this.buttonOutputSaveToTxt.Size = new System.Drawing.Size(105, 23);
             this.buttonOutputSaveToTxt.TabIndex = 15;
             this.buttonOutputSaveToTxt.Text = "Сохранить в TXT";
+            this.toolTipHelp.SetToolTip(this.buttonOutputSaveToTxt, "Сохранить конфигурацию в текстовый документ (TXT)");
             this.buttonOutputSaveToTxt.UseVisualStyleBackColor = true;
             this.buttonOutputSaveToTxt.Click += new System.EventHandler(this.buttonOutputSaveToTxt_Click);
             // 
@@ -341,6 +342,7 @@
             this.labelOutputTotalСableQuantity.Size = new System.Drawing.Size(251, 15);
             this.labelOutputTotalСableQuantity.TabIndex = 25;
             this.labelOutputTotalСableQuantity.Text = "Итоговое необходимое количество кабеля:";
+            this.toolTipHelp.SetToolTip(this.labelOutputTotalСableQuantity, resources.GetString("labelOutputTotalСableQuantity.ToolTip"));
             // 
             // labelMetersTotal
             // 
@@ -361,6 +363,7 @@
             this.textBoxOutputTotalСableQuantity.ReadOnly = true;
             this.textBoxOutputTotalСableQuantity.Size = new System.Drawing.Size(100, 23);
             this.textBoxOutputTotalСableQuantity.TabIndex = 23;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputTotalСableQuantity, resources.GetString("textBoxOutputTotalСableQuantity.ToolTip"));
             // 
             // labelOutputHankQuantity
             // 
@@ -545,6 +548,10 @@
         "ую предыдущую конфигурацию");
             this.buttonHistory.UseVisualStyleBackColor = true;
             this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
+            // 
+            // toolTipHelp
+            // 
+            this.toolTipHelp.AutomaticDelay = 1000;
             // 
             // CalculateControl
             // 

@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonBack = new System.Windows.Forms.Button();
             this.textBoxInformation = new System.Windows.Forms.TextBox();
             this.labelAuthorName = new System.Windows.Forms.Label();
+            this.toolTipHelp = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // buttonBack
@@ -40,6 +42,7 @@
             this.buttonBack.Size = new System.Drawing.Size(105, 23);
             this.buttonBack.TabIndex = 20;
             this.buttonBack.Text = "Назад";
+            this.toolTipHelp.SetToolTip(this.buttonBack, "Вернуться в предыдущий режим");
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
@@ -63,6 +66,12 @@
             this.labelAuthorName.Size = new System.Drawing.Size(160, 17);
             this.labelAuthorName.TabIndex = 22;
             this.labelAuthorName.Text = "Павел Бацемакин, 2022 г.";
+            this.toolTipHelp.SetToolTip(this.labelAuthorName, "github.com/Rhoxolan");
+            this.labelAuthorName.DoubleClick += new System.EventHandler(this.labelAuthorName_DoubleClick);
+            // 
+            // toolTipHelp
+            // 
+            this.toolTipHelp.AutomaticDelay = 1000;
             // 
             // InformationControl
             // 
@@ -85,5 +94,6 @@
         private Button buttonBack;
         private TextBox textBoxInformation;
         private Label labelAuthorName;
+        private ToolTip toolTipHelp;
     }
 }
