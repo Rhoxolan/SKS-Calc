@@ -116,7 +116,6 @@ namespace SKS_Calc
                 textBoxOutputСableQuantity.Text = СableQuantity.ToString("F" + 2);
                 textBoxOutputHankQuantity.Text = HankQuantity.ToString("F" + 2);
                 textBoxOutputTotalСableQuantity.Text = TotalСableQuantity.ToString("F" + 2);
-                //Saver(configurations);
             }
             else
             {
