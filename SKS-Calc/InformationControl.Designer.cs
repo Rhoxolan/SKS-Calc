@@ -37,7 +37,7 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(3, 494);
+            this.buttonBack.Location = new System.Drawing.Point(3, 524);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(105, 23);
             this.buttonBack.TabIndex = 20;
@@ -55,14 +55,14 @@
             this.textBoxInformation.Name = "textBoxInformation";
             this.textBoxInformation.ReadOnly = true;
             this.textBoxInformation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxInformation.Size = new System.Drawing.Size(508, 485);
+            this.textBoxInformation.Size = new System.Drawing.Size(508, 515);
             this.textBoxInformation.TabIndex = 21;
             // 
             // labelAuthorName
             // 
             this.labelAuthorName.AutoSize = true;
             this.labelAuthorName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelAuthorName.Location = new System.Drawing.Point(351, 496);
+            this.labelAuthorName.Location = new System.Drawing.Point(351, 526);
             this.labelAuthorName.Name = "labelAuthorName";
             this.labelAuthorName.Size = new System.Drawing.Size(160, 17);
             this.labelAuthorName.TabIndex = 22;
@@ -83,7 +83,7 @@
             this.Controls.Add(this.textBoxInformation);
             this.Controls.Add(this.buttonBack);
             this.Name = "InformationControl";
-            this.Size = new System.Drawing.Size(514, 520);
+            this.Size = new System.Drawing.Size(514, 550);
             this.Load += new System.EventHandler(this.InformationControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

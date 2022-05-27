@@ -45,6 +45,8 @@
             this.labelMeters3 = new System.Windows.Forms.Label();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.groupBoxOutput = new System.Windows.Forms.GroupBox();
+            this.textBoxOutputNumberOfWorkplaces = new System.Windows.Forms.TextBox();
+            this.labelOutputNumberOfWorkplaces = new System.Windows.Forms.Label();
             this.buttonOutputSaveToTxt = new System.Windows.Forms.Button();
             this.labelOutputTotalСableQuantity = new System.Windows.Forms.Label();
             this.labelMetersTotal = new System.Windows.Forms.Label();
@@ -295,6 +297,8 @@
             // 
             // groupBoxOutput
             // 
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputNumberOfWorkplaces);
+            this.groupBoxOutput.Controls.Add(this.labelOutputNumberOfWorkplaces);
             this.groupBoxOutput.Controls.Add(this.buttonOutputSaveToTxt);
             this.groupBoxOutput.Controls.Add(this.labelOutputTotalСableQuantity);
             this.groupBoxOutput.Controls.Add(this.labelMetersTotal);
@@ -317,14 +321,34 @@
             this.groupBoxOutput.Controls.Add(this.labelOutputMinPermamentLink);
             this.groupBoxOutput.Location = new System.Drawing.Point(3, 262);
             this.groupBoxOutput.Name = "groupBoxOutput";
-            this.groupBoxOutput.Size = new System.Drawing.Size(509, 256);
+            this.groupBoxOutput.Size = new System.Drawing.Size(509, 283);
             this.groupBoxOutput.TabIndex = 14;
             this.groupBoxOutput.TabStop = false;
             this.groupBoxOutput.Text = "Вывод";
             // 
+            // textBoxOutputNumberOfWorkplaces
+            // 
+            this.textBoxOutputNumberOfWorkplaces.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxOutputNumberOfWorkplaces.Location = new System.Drawing.Point(374, 109);
+            this.textBoxOutputNumberOfWorkplaces.Name = "textBoxOutputNumberOfWorkplaces";
+            this.textBoxOutputNumberOfWorkplaces.ReadOnly = true;
+            this.textBoxOutputNumberOfWorkplaces.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputNumberOfWorkplaces.TabIndex = 27;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputNumberOfWorkplaces, "Введённое вами количество портов на 1 рабочее место");
+            // 
+            // labelOutputNumberOfWorkplaces
+            // 
+            this.labelOutputNumberOfWorkplaces.AutoSize = true;
+            this.labelOutputNumberOfWorkplaces.Location = new System.Drawing.Point(6, 117);
+            this.labelOutputNumberOfWorkplaces.Name = "labelOutputNumberOfWorkplaces";
+            this.labelOutputNumberOfWorkplaces.Size = new System.Drawing.Size(154, 15);
+            this.labelOutputNumberOfWorkplaces.TabIndex = 26;
+            this.labelOutputNumberOfWorkplaces.Text = "Количество рабочих мест:";
+            this.toolTipHelp.SetToolTip(this.labelOutputNumberOfWorkplaces, "Пожалуйста, введите количество рабочих мест");
+            // 
             // buttonOutputSaveToTxt
             // 
-            this.buttonOutputSaveToTxt.Location = new System.Drawing.Point(7, 225);
+            this.buttonOutputSaveToTxt.Location = new System.Drawing.Point(6, 251);
             this.buttonOutputSaveToTxt.Name = "buttonOutputSaveToTxt";
             this.buttonOutputSaveToTxt.Size = new System.Drawing.Size(105, 23);
             this.buttonOutputSaveToTxt.TabIndex = 15;
@@ -337,7 +361,7 @@
             // 
             this.labelOutputTotalСableQuantity.AutoSize = true;
             this.labelOutputTotalСableQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelOutputTotalСableQuantity.Location = new System.Drawing.Point(6, 204);
+            this.labelOutputTotalСableQuantity.Location = new System.Drawing.Point(6, 233);
             this.labelOutputTotalСableQuantity.Name = "labelOutputTotalСableQuantity";
             this.labelOutputTotalСableQuantity.Size = new System.Drawing.Size(251, 15);
             this.labelOutputTotalСableQuantity.TabIndex = 25;
@@ -348,7 +372,7 @@
             // 
             this.labelMetersTotal.AutoSize = true;
             this.labelMetersTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelMetersTotal.Location = new System.Drawing.Point(480, 204);
+            this.labelMetersTotal.Location = new System.Drawing.Point(480, 233);
             this.labelMetersTotal.Name = "labelMetersTotal";
             this.labelMetersTotal.Size = new System.Drawing.Size(19, 15);
             this.labelMetersTotal.TabIndex = 24;
@@ -358,7 +382,7 @@
             // 
             this.textBoxOutputTotalСableQuantity.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxOutputTotalСableQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOutputTotalСableQuantity.Location = new System.Drawing.Point(374, 196);
+            this.textBoxOutputTotalСableQuantity.Location = new System.Drawing.Point(374, 225);
             this.textBoxOutputTotalСableQuantity.Name = "textBoxOutputTotalСableQuantity";
             this.textBoxOutputTotalСableQuantity.ReadOnly = true;
             this.textBoxOutputTotalСableQuantity.Size = new System.Drawing.Size(100, 23);
@@ -368,7 +392,7 @@
             // labelOutputHankQuantity
             // 
             this.labelOutputHankQuantity.AutoSize = true;
-            this.labelOutputHankQuantity.Location = new System.Drawing.Point(7, 175);
+            this.labelOutputHankQuantity.Location = new System.Drawing.Point(7, 204);
             this.labelOutputHankQuantity.Name = "labelOutputHankQuantity";
             this.labelOutputHankQuantity.Size = new System.Drawing.Size(225, 15);
             this.labelOutputHankQuantity.TabIndex = 22;
@@ -379,7 +403,7 @@
             // textBoxOutputHankQuantity
             // 
             this.textBoxOutputHankQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxOutputHankQuantity.Location = new System.Drawing.Point(374, 167);
+            this.textBoxOutputHankQuantity.Location = new System.Drawing.Point(374, 196);
             this.textBoxOutputHankQuantity.Name = "textBoxOutputHankQuantity";
             this.textBoxOutputHankQuantity.ReadOnly = true;
             this.textBoxOutputHankQuantity.Size = new System.Drawing.Size(100, 23);
@@ -390,7 +414,7 @@
             // labelOutputСableQuantity
             // 
             this.labelOutputСableQuantity.AutoSize = true;
-            this.labelOutputСableQuantity.Location = new System.Drawing.Point(7, 146);
+            this.labelOutputСableQuantity.Location = new System.Drawing.Point(7, 175);
             this.labelOutputСableQuantity.Name = "labelOutputСableQuantity";
             this.labelOutputСableQuantity.Size = new System.Drawing.Size(198, 15);
             this.labelOutputСableQuantity.TabIndex = 20;
@@ -401,7 +425,7 @@
             // labelMeters7
             // 
             this.labelMeters7.AutoSize = true;
-            this.labelMeters7.Location = new System.Drawing.Point(480, 146);
+            this.labelMeters7.Location = new System.Drawing.Point(480, 175);
             this.labelMeters7.Name = "labelMeters7";
             this.labelMeters7.Size = new System.Drawing.Size(19, 15);
             this.labelMeters7.TabIndex = 19;
@@ -410,7 +434,7 @@
             // textBoxOutputСableQuantity
             // 
             this.textBoxOutputСableQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxOutputСableQuantity.Location = new System.Drawing.Point(374, 138);
+            this.textBoxOutputСableQuantity.Location = new System.Drawing.Point(374, 167);
             this.textBoxOutputСableQuantity.Name = "textBoxOutputСableQuantity";
             this.textBoxOutputСableQuantity.ReadOnly = true;
             this.textBoxOutputСableQuantity.Size = new System.Drawing.Size(100, 23);
@@ -421,7 +445,7 @@
             // labelOutputNumberOfPorts
             // 
             this.labelOutputNumberOfPorts.AutoSize = true;
-            this.labelOutputNumberOfPorts.Location = new System.Drawing.Point(6, 117);
+            this.labelOutputNumberOfPorts.Location = new System.Drawing.Point(6, 146);
             this.labelOutputNumberOfPorts.Name = "labelOutputNumberOfPorts";
             this.labelOutputNumberOfPorts.Size = new System.Drawing.Size(227, 15);
             this.labelOutputNumberOfPorts.TabIndex = 17;
@@ -431,7 +455,7 @@
             // textBoxOutputNumberOfPorts
             // 
             this.textBoxOutputNumberOfPorts.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxOutputNumberOfPorts.Location = new System.Drawing.Point(374, 109);
+            this.textBoxOutputNumberOfPorts.Location = new System.Drawing.Point(374, 138);
             this.textBoxOutputNumberOfPorts.Name = "textBoxOutputNumberOfPorts";
             this.textBoxOutputNumberOfPorts.ReadOnly = true;
             this.textBoxOutputNumberOfPorts.Size = new System.Drawing.Size(100, 23);
@@ -576,7 +600,7 @@
             this.Controls.Add(this.numericUpDownMinPermamentLink);
             this.Controls.Add(this.labelMinPermamentLink);
             this.Name = "CalculateControl";
-            this.Size = new System.Drawing.Size(514, 520);
+            this.Size = new System.Drawing.Size(514, 550);
             this.Load += new System.EventHandler(this.CalculateControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).EndInit();
@@ -630,5 +654,7 @@
         private Button buttonInfo;
         private Button buttonHistory;
         private ToolTip toolTipHelp;
+        private TextBox textBoxOutputNumberOfWorkplaces;
+        private Label labelOutputNumberOfWorkplaces;
     }
 }

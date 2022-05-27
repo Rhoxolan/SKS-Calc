@@ -52,6 +52,8 @@ namespace SKS_Calc
                     $"{configurations[listBoxConfigurationsList.SelectedIndex].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
                     $"Средняя длина постоянного линка (Permament Link): " +
                     $"{configurations[listBoxConfigurationsList.SelectedIndex].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                    $"Количество рабочих мест: " +
+                    $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfWorkplaces}{Environment.NewLine}" +
                     $"Количество портов на 1 рабочее место: " +
                     $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfPorts}{Environment.NewLine}" +
                     $"Необходимое количество кабеля: " +
@@ -71,6 +73,8 @@ namespace SKS_Calc
                     $"{configurations[listBoxConfigurationsList.SelectedIndex].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
                     $"Средняя длина постоянного линка (Permament Link): " +
                     $"{configurations[listBoxConfigurationsList.SelectedIndex].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                    $"Количество рабочих мест: " +
+                    $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfWorkplaces}{Environment.NewLine}" +
                     $"Количество портов на 1 рабочее место: " +
                     $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfPorts}{Environment.NewLine}" +
                     $"Итоговое необходимое количество кабеля: " +
@@ -139,6 +143,8 @@ namespace SKS_Calc
                                 $"{configurations[listBoxConfigurationsList.SelectedIndex].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
                                 $"Средняя длина постоянного линка (Permament Link): " +
                                 $"{configurations[listBoxConfigurationsList.SelectedIndex].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                                $"Количество рабочих мест: " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfWorkplaces}{Environment.NewLine}" +
                                 $"Количество портов на 1 рабочее место: " +
                                 $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfPorts}{Environment.NewLine}" +
                                 $"Необходимое количество кабеля: " +
@@ -158,6 +164,8 @@ namespace SKS_Calc
                                 $"{configurations[listBoxConfigurationsList.SelectedIndex].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
                                 $"Средняя длина постоянного линка (Permament Link): " +
                                 $"{configurations[listBoxConfigurationsList.SelectedIndex].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                                $"Количество рабочих мест: " +
+                                $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfWorkplaces}{Environment.NewLine}" +
                                 $"Количество портов на 1 рабочее место: " +
                                 $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfPorts}{Environment.NewLine}" +
                                 $"Итоговое необходимое количество кабеля: " +

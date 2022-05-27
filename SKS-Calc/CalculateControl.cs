@@ -112,6 +112,7 @@ namespace SKS_Calc
                 textBoxOutputMinPermamentLink.Text = MinPermamentLink.ToString("F" + 2);
                 textBoxOutputMaxPermamentLink.Text = MaxPermamentLink.ToString("F" + 2);
                 textBoxOutputAveragePermamentLink.Text = AveragePermamentLink.ToString("F" + 2);
+                textBoxOutputNumberOfWorkplaces.Text = NumberOfWorkplaces.ToString();
                 textBoxOutputNumberOfPorts.Text = NumberOfPorts.ToString();
                 textBoxOutputСableQuantity.Text = СableQuantity.ToString("F" + 2);
                 textBoxOutputHankQuantity.Text = HankQuantity.ToString("F" + 2);
@@ -131,6 +132,7 @@ namespace SKS_Calc
                 textBoxOutputMinPermamentLink.Text = MinPermamentLink.ToString("F" + 2);
                 textBoxOutputMaxPermamentLink.Text = MaxPermamentLink.ToString("F" + 2);
                 textBoxOutputAveragePermamentLink.Text = AveragePermamentLink.ToString("F" + 2);
+                textBoxOutputNumberOfWorkplaces.Text = NumberOfWorkplaces.ToString();
                 textBoxOutputNumberOfPorts.Text = NumberOfPorts.ToString();
                 textBoxOutputTotalСableQuantity.Text = TotalСableQuantity.ToString("F" + 2);
             }
@@ -159,6 +161,8 @@ namespace SKS_Calc
                             $"{configurations[^1].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
                             $"Средняя длина постоянного линка (Permament Link): " +
                             $"{configurations[^1].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                            $"Количество рабочих мест: " +
+                            $"{configurations[^1].NumberOfWorkplaces}{Environment.NewLine}" +
                             $"Количество портов на 1 рабочее место: " +
                             $"{configurations[^1].NumberOfPorts}{Environment.NewLine}" +
                             $"Необходимое количество кабеля: " +
@@ -178,6 +182,8 @@ namespace SKS_Calc
                             $"{configurations[^1].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
                             $"Средняя длина постоянного линка (Permament Link): " +
                             $"{configurations[^1].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
+                            $"Количество рабочих мест: " +
+                            $"{configurations[^1].NumberOfWorkplaces}{Environment.NewLine}" +
                             $"Количество портов на 1 рабочее место: " +
                             $"{configurations[^1].NumberOfPorts}{Environment.NewLine}" +
                             $"Итоговое необходимое количество кабеля: " +
@@ -192,6 +198,7 @@ namespace SKS_Calc
             textBoxOutputMinPermamentLink.Text = string.Empty;
             textBoxOutputMaxPermamentLink.Text = string.Empty;
             textBoxOutputAveragePermamentLink.Text = string.Empty;
+            textBoxOutputNumberOfWorkplaces.Text = string.Empty;
             textBoxOutputNumberOfPorts.Text = string.Empty;
             textBoxOutputСableQuantity.Text = string.Empty;
             textBoxOutputHankQuantity.Text = string.Empty;
