@@ -45,19 +45,22 @@ namespace SKS_Calc
 
         private void labelAuthorName_DoubleClick(object sender, EventArgs e)
         {
-            string target = "http://www.microsoft.com";
             try
             {
-                System.Diagnostics.Process.Start(target);
+                using (Process process = new())
+                {
+                    process.StartInfo.UseShellExecute = true;
+                    process.StartInfo.FileName = "https://github.com/Rhoxolan";
+                    process.Start();
+                }
             }
-            catch (System.ComponentModel.Win32Exception noBrowser)
+            catch (Win32Exception wex)
             {
-                if (noBrowser.ErrorCode == -2147467259)
-                    MessageBox.Show(noBrowser.Message);
+                MessageBox.Show(wex.Message);
             }
-            catch (System.Exception other)
+            catch (Exception ex)
             {
-                MessageBox.Show(other.Message);
+                MessageBox.Show(ex.Message);
             }
         }
     }
