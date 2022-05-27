@@ -44,41 +44,11 @@ namespace SKS_Calc
             if (configurations[listBoxConfigurationsList.SelectedIndex].СableQuantity != null
                 && configurations[listBoxConfigurationsList.SelectedIndex].HankQuantity != null)
             {
-                textBoxShowConfigurationDetails.Text =
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.ToString()}{Environment.NewLine}" +
-                    $"Наименьшая длина постоянного линка (Permament Link): " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                    $"Наибольшая длина постоянного линка (Permament Link): " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                    $"Средняя длина постоянного линка (Permament Link): " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                    $"Количество рабочих мест: " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfWorkplaces}{Environment.NewLine}" +
-                    $"Количество портов на 1 рабочее место: " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfPorts}{Environment.NewLine}" +
-                    $"Необходимое количество кабеля: " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].СableQuantity?.ToString("F" + 2)} м.{Environment.NewLine}" +
-                    $"Необходимое количество бухт кабеля: " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].HankQuantity}{Environment.NewLine}" +
-                    $"Итоговое необходимое количество кабеля: " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].TotalСableQuantity.ToString("F" + 2)}{Environment.NewLine}";
+                textBoxShowConfigurationDetails.Text = configurations[listBoxConfigurationsList.SelectedIndex].ToLongOutputString();
             }
             else
             {
-                textBoxShowConfigurationDetails.Text =
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.ToString()}{Environment.NewLine}" +
-                    $"Наименьшая длина постоянного линка (Permament Link): " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                    $"Наибольшая длина постоянного линка (Permament Link): " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                    $"Средняя длина постоянного линка (Permament Link): " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                    $"Количество рабочих мест: " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfWorkplaces}{Environment.NewLine}" +
-                    $"Количество портов на 1 рабочее место: " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfPorts}{Environment.NewLine}" +
-                    $"Итоговое необходимое количество кабеля: " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].TotalСableQuantity.ToString("F" + 2)}{Environment.NewLine}";
+                textBoxShowConfigurationDetails.Text = configurations[listBoxConfigurationsList.SelectedIndex].ToLongOutputString();
             }
         }
 
@@ -133,43 +103,16 @@ namespace SKS_Calc
                     FileStream fs = new(sfd.FileName, FileMode.Create);
                     using (StreamWriter sw = new(fs))
                     {
-                        if (configurations[listBoxConfigurationsList.SelectedIndex].СableQuantity != null && configurations[listBoxConfigurationsList.SelectedIndex].HankQuantity != null)
+                        if (configurations[listBoxConfigurationsList.SelectedIndex].СableQuantity != null &&
+                            configurations[listBoxConfigurationsList.SelectedIndex].HankQuantity != null)
                         {
-                            sw.WriteLine($"Конфигурация создана в приложении SCS-Calc{Environment.NewLine}{Environment.NewLine}" +
-                                $"Дата записи конфигурации: {configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.ToString()}{Environment.NewLine}" +
-                                $"Наименьшая длина постоянного линка (Permament Link):" +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                                $"Наибольшая длина постоянного линка (Permament Link): " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                                $"Средняя длина постоянного линка (Permament Link): " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                                $"Количество рабочих мест: " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfWorkplaces}{Environment.NewLine}" +
-                                $"Количество портов на 1 рабочее место: " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfPorts}{Environment.NewLine}" +
-                                $"Необходимое количество кабеля: " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].СableQuantity?.ToString("F" + 2)} м.{Environment.NewLine}" +
-                                $"Необходимое количество бухт кабеля: " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].HankQuantity?.ToString("F" + 2)} м.{Environment.NewLine}" +
-                                $"Итоговое необходимое количество кабеля: " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].TotalСableQuantity.ToString("F" + 2)} м.{Environment.NewLine}");
+                            sw.WriteLine(
+                                configurations[listBoxConfigurationsList.SelectedIndex].ToLongSaveString());
                         }
                         else
                         {
-                            sw.WriteLine($"Конфигурация создана в приложении SCS-Calc{Environment.NewLine}{Environment.NewLine}" +
-                                $"Дата записи конфигурации: {configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.ToString()}{Environment.NewLine}" +
-                                $"Наименьшая длина постоянного линка (Permament Link):" +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                                $"Наибольшая длина постоянного линка (Permament Link): " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                                $"Средняя длина постоянного линка (Permament Link): " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].AveragePermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
-                                $"Количество рабочих мест: " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfWorkplaces}{Environment.NewLine}" +
-                                $"Количество портов на 1 рабочее место: " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].NumberOfPorts}{Environment.NewLine}" +
-                                $"Итоговое необходимое количество кабеля: " +
-                                $"{configurations[listBoxConfigurationsList.SelectedIndex].TotalСableQuantity.ToString("F" + 2)} м.{Environment.NewLine}");
+                            sw.WriteLine(
+                                configurations[listBoxConfigurationsList.SelectedIndex].ToLongSaveString());
                         }
                     }
                 }
