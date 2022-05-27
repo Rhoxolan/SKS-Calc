@@ -88,7 +88,7 @@ namespace SKS_Calc
         {
             if (checkBoxCableHankMeterage.Checked)
             {
-                double TechnologicalReserve = 1.1; //Коэффициент технологического запаса
+                double TechnologicalReserve = 1.10; //Коэффициент технологического запаса
                 double MinPermamentLink = (double)numericUpDownMinPermamentLink.Value;
                 double MaxPermamentLink = (double)numericUpDownMaxPermamentLink.Value;
                 double AveragePermamentLink = (MinPermamentLink + MaxPermamentLink) / 2 * TechnologicalReserve;
@@ -119,7 +119,7 @@ namespace SKS_Calc
             }
             else
             {
-                double TechnologicalReserve = 1.1; //Коэффициент технологического запаса
+                double TechnologicalReserve = 1.10; //Коэффициент технологического запаса
                 double MinPermamentLink = (double)numericUpDownMinPermamentLink.Value;
                 double MaxPermamentLink = (double)numericUpDownMaxPermamentLink.Value;
                 double AveragePermamentLink = (MinPermamentLink + MaxPermamentLink) / 2 * TechnologicalReserve;
@@ -133,7 +133,6 @@ namespace SKS_Calc
                 textBoxOutputAveragePermamentLink.Text = AveragePermamentLink.ToString("F" + 2);
                 textBoxOutputNumberOfPorts.Text = NumberOfPorts.ToString();
                 textBoxOutputTotalСableQuantity.Text = TotalСableQuantity.ToString("F" + 2);
-                //Saver(configurations);
             }
             buttonOutputSaveToTxt.Enabled = true;
         }
