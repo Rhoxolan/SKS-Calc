@@ -334,7 +334,7 @@
             this.textBoxOutputNumberOfWorkplaces.ReadOnly = true;
             this.textBoxOutputNumberOfWorkplaces.Size = new System.Drawing.Size(100, 23);
             this.textBoxOutputNumberOfWorkplaces.TabIndex = 27;
-            this.toolTipHelp.SetToolTip(this.textBoxOutputNumberOfWorkplaces, "Введённое вами количество портов на 1 рабочее место");
+            this.toolTipHelp.SetToolTip(this.textBoxOutputNumberOfWorkplaces, "Введённое вами количество рабочих мест");
             // 
             // labelOutputNumberOfWorkplaces
             // 
@@ -344,7 +344,7 @@
             this.labelOutputNumberOfWorkplaces.Size = new System.Drawing.Size(154, 15);
             this.labelOutputNumberOfWorkplaces.TabIndex = 26;
             this.labelOutputNumberOfWorkplaces.Text = "Количество рабочих мест:";
-            this.toolTipHelp.SetToolTip(this.labelOutputNumberOfWorkplaces, "Пожалуйста, введите количество рабочих мест");
+            this.toolTipHelp.SetToolTip(this.labelOutputNumberOfWorkplaces, "Введённое вами количество рабочих мест");
             // 
             // buttonOutputSaveToTxt
             // 
