@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System.ComponentModel;
 using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SKS_Calc
 {
@@ -54,11 +46,11 @@ namespace SKS_Calc
             }
         }
 
-        private void buttonHistory_Click(object sender, EventArgs e)
+        private void buttonHistory_Click(object sender, EventArgs e) //Переход в режим "История"
         {
             if(ChildControls != null && ChildControls.Count > 0)
             {
-                foreach (var c in ChildControls)
+                foreach (UserControl c in ChildControls)
                 {
                     if(c is HistoryControl)
                     {
@@ -69,11 +61,11 @@ namespace SKS_Calc
             }
         }
 
-        private void buttonInfo_Click(object sender, EventArgs e)
+        private void buttonInfo_Click(object sender, EventArgs e) //Переход в режим "Информация"
         {
             if (ChildControls != null && ChildControls.Count > 0)
             {
-                foreach (var c in ChildControls)
+                foreach (UserControl c in ChildControls)
                 {
                     if (c is InformationControl)
                     {
@@ -163,7 +155,7 @@ namespace SKS_Calc
             }
         }
 
-        private void OutputBlockCleaner(object? sender, EventArgs e)
+        private void OutputBlockCleaner(object? sender, EventArgs e) //Обработчик для очистки блока вывода
         {
             textBoxOutputMinPermamentLink.Text = string.Empty;
             textBoxOutputMaxPermamentLink.Text = string.Empty;

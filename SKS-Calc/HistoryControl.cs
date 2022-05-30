@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System.ComponentModel;
 using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SKS_Calc
 {
@@ -30,7 +22,7 @@ namespace SKS_Calc
             listBoxConfigurationsList.DataSource = configurations;
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e) //Переход в предыдущий режим
         {
             if (ParentControl != null)
             {

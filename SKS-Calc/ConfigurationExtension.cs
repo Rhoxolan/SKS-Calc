@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SKS_Calc
+﻿namespace SKS_Calc
 {
     //Методы расширения класса Configuration. Методы создаются для удобства работы с объектами
     //класса Configuration в разных частях приложения, в частности в разных UserControl-ах.
