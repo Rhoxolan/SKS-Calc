@@ -27,6 +27,7 @@ namespace SKS_Calc
             numericUpDownNumberOfPorts.ValueChanged += OutputBlockCleaner;
             checkBoxCableHankMeterage.CheckedChanged += OutputBlockCleaner;
             numericUpDownCableHankMeterage.ValueChanged += OutputBlockCleaner;
+            this.VisibleChanged += OutputBlockCleaner; //Очищаем блок вывода при выходе из режима расчёта
         }
 
         private void CalculateControl_Load(object sender, EventArgs e)
@@ -100,14 +101,15 @@ namespace SKS_Calc
                     Math.Floor(CableHankMeterage / AveragePermamentLink));
                 double TotalСableQuantity = HankQuantity * CableHankMeterage;
                 configurations.Add(new(DateTime.Now, MinPermamentLink, MaxPermamentLink, AveragePermamentLink,
-                    NumberOfWorkplaces, NumberOfPorts, СableQuantity, HankQuantity, TotalСableQuantity));
+                    NumberOfWorkplaces, NumberOfPorts, СableQuantity, CableHankMeterage, HankQuantity, TotalСableQuantity));
                 textBoxOutputMinPermamentLink.Text = MinPermamentLink.ToString("F" + 2);
                 textBoxOutputMaxPermamentLink.Text = MaxPermamentLink.ToString("F" + 2);
                 textBoxOutputAveragePermamentLink.Text = AveragePermamentLink.ToString("F" + 2);
                 textBoxOutputNumberOfWorkplaces.Text = NumberOfWorkplaces.ToString();
                 textBoxOutputNumberOfPorts.Text = NumberOfPorts.ToString();
                 textBoxOutputСableQuantity.Text = СableQuantity.ToString("F" + 2);
-                textBoxOutputHankQuantity.Text = HankQuantity.ToString("F" + 2);
+                textBoxOutputCableHankMeterage.Text = CableHankMeterage.ToString("F" + 2);
+                textBoxOutputHankQuantity.Text = HankQuantity.ToString();
                 textBoxOutputTotalСableQuantity.Text = TotalСableQuantity.ToString("F" + 2);
             }
             else
@@ -120,7 +122,7 @@ namespace SKS_Calc
                 int NumberOfPorts = (int)numericUpDownNumberOfPorts.Value;
                 double TotalСableQuantity = AveragePermamentLink * NumberOfWorkplaces * NumberOfPorts;
                 configurations.Add(new(DateTime.Now, MinPermamentLink, MaxPermamentLink, AveragePermamentLink,
-                    NumberOfWorkplaces, NumberOfPorts, null, null, TotalСableQuantity));
+                    NumberOfWorkplaces, NumberOfPorts, null, null, null, TotalСableQuantity));
                 textBoxOutputMinPermamentLink.Text = MinPermamentLink.ToString("F" + 2);
                 textBoxOutputMaxPermamentLink.Text = MaxPermamentLink.ToString("F" + 2);
                 textBoxOutputAveragePermamentLink.Text = AveragePermamentLink.ToString("F" + 2);
@@ -133,26 +135,7 @@ namespace SKS_Calc
 
         private void buttonOutputSaveToTxt_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new();
-            sfd.Filter = "Текстовые документы(*.txt)|*.txt";
-            sfd.FileName = $"Конфигурация СКС {configurations[^1].RecordTime.ToShortDateString()} " +
-                $"{configurations[^1].RecordTime.Hour}.{configurations[^1].RecordTime.Minute}." +
-                $"{configurations[^1].RecordTime.Second}.txt";
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                FileStream fs = new(sfd.FileName, FileMode.Create);
-                using (StreamWriter sw = new(fs))
-                {
-                    if (configurations[^1].СableQuantity != null && configurations[^1].HankQuantity != null)
-                    {
-                        sw.WriteLine(configurations[^1].ToLongSaveString());
-                    }
-                    else
-                    {
-                        sw.WriteLine(configurations[^1].ToLongSaveString());
-                    }
-                }
-            }
+            configurations[^1].SaveToTXT();
         }
 
         private void OutputBlockCleaner(object? sender, EventArgs e) //Обработчик для очистки блока вывода
@@ -164,6 +147,7 @@ namespace SKS_Calc
             textBoxOutputNumberOfPorts.Text = string.Empty;
             textBoxOutputСableQuantity.Text = string.Empty;
             textBoxOutputHankQuantity.Text = string.Empty;
+            textBoxOutputCableHankMeterage.Text = string.Empty;
             textBoxOutputTotalСableQuantity.Text = string.Empty;
             numericUpDownCableHankMeterage.Enabled = false;
             if (checkBoxCableHankMeterage.Checked)
@@ -171,6 +155,9 @@ namespace SKS_Calc
                 labelOutputСableQuantity.Enabled = true;
                 textBoxOutputСableQuantity.Enabled = true;
                 labelMeters7.Enabled = true;
+                labelOutputCableHankMeterage.Enabled = true;
+                textBoxOutputCableHankMeterage.Enabled = true;
+                labelMeters8.Enabled = true;
                 labelOutputHankQuantity.Enabled = true;
                 textBoxOutputHankQuantity.Enabled = true;
                 numericUpDownCableHankMeterage.Enabled = true;
@@ -180,6 +167,9 @@ namespace SKS_Calc
                 labelOutputСableQuantity.Enabled = false;
                 textBoxOutputСableQuantity.Enabled = false;
                 labelMeters7.Enabled = false;
+                labelOutputCableHankMeterage.Enabled = false;
+                textBoxOutputCableHankMeterage.Enabled = false;
+                labelMeters8.Enabled = false;
                 labelOutputHankQuantity.Enabled = false;
                 textBoxOutputHankQuantity.Enabled = false;
                 numericUpDownCableHankMeterage.Enabled = false;

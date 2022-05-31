@@ -88,7 +88,7 @@
             this.textBoxShowConfigurationDetails.Multiline = true;
             this.textBoxShowConfigurationDetails.Name = "textBoxShowConfigurationDetails";
             this.textBoxShowConfigurationDetails.ReadOnly = true;
-            this.textBoxShowConfigurationDetails.Size = new System.Drawing.Size(508, 278);
+            this.textBoxShowConfigurationDetails.Size = new System.Drawing.Size(508, 313);
             this.textBoxShowConfigurationDetails.TabIndex = 20;
             // 
             // buttonOutputSaveToTxt
@@ -118,7 +118,7 @@
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.listBoxConfigurationsList);
             this.Name = "HistoryControl";
-            this.Size = new System.Drawing.Size(514, 550);
+            this.Size = new System.Drawing.Size(514, 585);
             this.ResumeLayout(false);
             this.PerformLayout();
 

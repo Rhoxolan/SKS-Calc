@@ -1,12 +1,12 @@
 ﻿namespace SKS_Calc
 {
     public record Configuration(DateTime RecordTime, double MinPermamentLink, double MaxPermamentLink,
-        double AveragePermamentLink, int NumberOfWorkplaces, int NumberOfPorts, double? СableQuantity, int? HankQuantity,
-        double TotalСableQuantity)
+        double AveragePermamentLink, int NumberOfWorkplaces, int NumberOfPorts, double? СableQuantity,
+        double? CableHankMeterage, int? HankQuantity, double TotalСableQuantity)
     {
         public override string ToString()
         {
-            if(HankQuantity!=null)
+            if(CableHankMeterage != null)
             {
                 return $"{RecordTime.ToString()}, мин.{MinPermamentLink.ToString("F" + 2)} м / макс.{MaxPermamentLink.ToString("F" + 2)} м, " +
                     $"{HankQuantity} бухт; {TotalСableQuantity.ToString("F" + 2)} м.";

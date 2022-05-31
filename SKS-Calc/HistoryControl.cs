@@ -83,32 +83,7 @@ namespace SKS_Calc
 
         private void buttonOutputSaveToTxt_Click(object sender, EventArgs e)
         {
-            if (listBoxConfigurationsList.SelectedIndex != -1)
-            {
-                SaveFileDialog sfd = new();
-                sfd.Filter = "Текстовые документы(*.txt)|*.txt";
-                sfd.FileName = $"Конфигурация СКС {configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.ToShortDateString()} " +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.Hour}.{configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.Minute}." +
-                    $"{configurations[listBoxConfigurationsList.SelectedIndex].RecordTime.Second}.txt";
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    FileStream fs = new(sfd.FileName, FileMode.Create);
-                    using (StreamWriter sw = new(fs))
-                    {
-                        if (configurations[listBoxConfigurationsList.SelectedIndex].СableQuantity != null &&
-                            configurations[listBoxConfigurationsList.SelectedIndex].HankQuantity != null)
-                        {
-                            sw.WriteLine(
-                                configurations[listBoxConfigurationsList.SelectedIndex].ToLongSaveString());
-                        }
-                        else
-                        {
-                            sw.WriteLine(
-                                configurations[listBoxConfigurationsList.SelectedIndex].ToLongSaveString());
-                        }
-                    }
-                }
-            }
+            configurations[listBoxConfigurationsList.SelectedIndex].SaveToTXT();
         }
     }
 }

@@ -45,6 +45,9 @@
             this.labelMeters3 = new System.Windows.Forms.Label();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.groupBoxOutput = new System.Windows.Forms.GroupBox();
+            this.labelMeters8 = new System.Windows.Forms.Label();
+            this.labelOutputCableHankMeterage = new System.Windows.Forms.Label();
+            this.textBoxOutputCableHankMeterage = new System.Windows.Forms.TextBox();
             this.textBoxOutputNumberOfWorkplaces = new System.Windows.Forms.TextBox();
             this.labelOutputNumberOfWorkplaces = new System.Windows.Forms.Label();
             this.buttonOutputSaveToTxt = new System.Windows.Forms.Button();
@@ -297,6 +300,9 @@
             // 
             // groupBoxOutput
             // 
+            this.groupBoxOutput.Controls.Add(this.labelMeters8);
+            this.groupBoxOutput.Controls.Add(this.labelOutputCableHankMeterage);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputCableHankMeterage);
             this.groupBoxOutput.Controls.Add(this.textBoxOutputNumberOfWorkplaces);
             this.groupBoxOutput.Controls.Add(this.labelOutputNumberOfWorkplaces);
             this.groupBoxOutput.Controls.Add(this.buttonOutputSaveToTxt);
@@ -321,10 +327,39 @@
             this.groupBoxOutput.Controls.Add(this.labelOutputMinPermamentLink);
             this.groupBoxOutput.Location = new System.Drawing.Point(3, 262);
             this.groupBoxOutput.Name = "groupBoxOutput";
-            this.groupBoxOutput.Size = new System.Drawing.Size(509, 283);
+            this.groupBoxOutput.Size = new System.Drawing.Size(509, 316);
             this.groupBoxOutput.TabIndex = 14;
             this.groupBoxOutput.TabStop = false;
             this.groupBoxOutput.Text = "Вывод";
+            // 
+            // labelMeters8
+            // 
+            this.labelMeters8.AutoSize = true;
+            this.labelMeters8.Location = new System.Drawing.Point(480, 204);
+            this.labelMeters8.Name = "labelMeters8";
+            this.labelMeters8.Size = new System.Drawing.Size(19, 15);
+            this.labelMeters8.TabIndex = 30;
+            this.labelMeters8.Text = "м.";
+            // 
+            // labelOutputCableHankMeterage
+            // 
+            this.labelOutputCableHankMeterage.AutoSize = true;
+            this.labelOutputCableHankMeterage.Location = new System.Drawing.Point(6, 204);
+            this.labelOutputCableHankMeterage.Name = "labelOutputCableHankMeterage";
+            this.labelOutputCableHankMeterage.Size = new System.Drawing.Size(161, 15);
+            this.labelOutputCableHankMeterage.TabIndex = 29;
+            this.labelOutputCableHankMeterage.Text = "Метраж кабеля в 1-й бухте: ";
+            this.toolTipHelp.SetToolTip(this.labelOutputCableHankMeterage, "Введённый вами метраж кабеля в 1-й бухте");
+            // 
+            // textBoxOutputCableHankMeterage
+            // 
+            this.textBoxOutputCableHankMeterage.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxOutputCableHankMeterage.Location = new System.Drawing.Point(374, 196);
+            this.textBoxOutputCableHankMeterage.Name = "textBoxOutputCableHankMeterage";
+            this.textBoxOutputCableHankMeterage.ReadOnly = true;
+            this.textBoxOutputCableHankMeterage.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputCableHankMeterage.TabIndex = 28;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputCableHankMeterage, "Введённый вами метраж кабеля в 1-й бухте");
             // 
             // textBoxOutputNumberOfWorkplaces
             // 
@@ -348,7 +383,7 @@
             // 
             // buttonOutputSaveToTxt
             // 
-            this.buttonOutputSaveToTxt.Location = new System.Drawing.Point(6, 251);
+            this.buttonOutputSaveToTxt.Location = new System.Drawing.Point(7, 283);
             this.buttonOutputSaveToTxt.Name = "buttonOutputSaveToTxt";
             this.buttonOutputSaveToTxt.Size = new System.Drawing.Size(105, 23);
             this.buttonOutputSaveToTxt.TabIndex = 15;
@@ -361,7 +396,7 @@
             // 
             this.labelOutputTotalСableQuantity.AutoSize = true;
             this.labelOutputTotalСableQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelOutputTotalСableQuantity.Location = new System.Drawing.Point(6, 233);
+            this.labelOutputTotalСableQuantity.Location = new System.Drawing.Point(6, 262);
             this.labelOutputTotalСableQuantity.Name = "labelOutputTotalСableQuantity";
             this.labelOutputTotalСableQuantity.Size = new System.Drawing.Size(251, 15);
             this.labelOutputTotalСableQuantity.TabIndex = 25;
@@ -372,7 +407,7 @@
             // 
             this.labelMetersTotal.AutoSize = true;
             this.labelMetersTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelMetersTotal.Location = new System.Drawing.Point(480, 233);
+            this.labelMetersTotal.Location = new System.Drawing.Point(480, 262);
             this.labelMetersTotal.Name = "labelMetersTotal";
             this.labelMetersTotal.Size = new System.Drawing.Size(19, 15);
             this.labelMetersTotal.TabIndex = 24;
@@ -382,7 +417,7 @@
             // 
             this.textBoxOutputTotalСableQuantity.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxOutputTotalСableQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOutputTotalСableQuantity.Location = new System.Drawing.Point(374, 225);
+            this.textBoxOutputTotalСableQuantity.Location = new System.Drawing.Point(374, 254);
             this.textBoxOutputTotalСableQuantity.Name = "textBoxOutputTotalСableQuantity";
             this.textBoxOutputTotalСableQuantity.ReadOnly = true;
             this.textBoxOutputTotalСableQuantity.Size = new System.Drawing.Size(100, 23);
@@ -392,7 +427,7 @@
             // labelOutputHankQuantity
             // 
             this.labelOutputHankQuantity.AutoSize = true;
-            this.labelOutputHankQuantity.Location = new System.Drawing.Point(7, 204);
+            this.labelOutputHankQuantity.Location = new System.Drawing.Point(6, 233);
             this.labelOutputHankQuantity.Name = "labelOutputHankQuantity";
             this.labelOutputHankQuantity.Size = new System.Drawing.Size(225, 15);
             this.labelOutputHankQuantity.TabIndex = 22;
@@ -403,7 +438,7 @@
             // textBoxOutputHankQuantity
             // 
             this.textBoxOutputHankQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxOutputHankQuantity.Location = new System.Drawing.Point(374, 196);
+            this.textBoxOutputHankQuantity.Location = new System.Drawing.Point(374, 225);
             this.textBoxOutputHankQuantity.Name = "textBoxOutputHankQuantity";
             this.textBoxOutputHankQuantity.ReadOnly = true;
             this.textBoxOutputHankQuantity.Size = new System.Drawing.Size(100, 23);
@@ -600,7 +635,7 @@
             this.Controls.Add(this.numericUpDownMinPermamentLink);
             this.Controls.Add(this.labelMinPermamentLink);
             this.Name = "CalculateControl";
-            this.Size = new System.Drawing.Size(514, 550);
+            this.Size = new System.Drawing.Size(514, 585);
             this.Load += new System.EventHandler(this.CalculateControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).EndInit();
@@ -656,5 +691,8 @@
         private ToolTip toolTipHelp;
         private TextBox textBoxOutputNumberOfWorkplaces;
         private Label labelOutputNumberOfWorkplaces;
+        private Label labelOutputCableHankMeterage;
+        private TextBox textBoxOutputCableHankMeterage;
+        private Label labelMeters8;
     }
 }
