@@ -50,12 +50,12 @@ namespace SKS_Calc
         {
             if(ChildControls != null && ChildControls.Count > 0)
             {
-                foreach (UserControl c in ChildControls)
+                foreach (UserControl uc in ChildControls)
                 {
-                    if(c is HistoryControl)
+                    if(uc is HistoryControl)
                     {
                         this.Visible = false;
-                        c.Visible = true;
+                        uc.Visible = true;
                     }
                 }
             }
@@ -65,12 +65,12 @@ namespace SKS_Calc
         {
             if (ChildControls != null && ChildControls.Count > 0)
             {
-                foreach (UserControl c in ChildControls)
+                foreach (UserControl uc in ChildControls)
                 {
-                    if (c is InformationControl)
+                    if (uc is InformationControl)
                     {
                         this.Visible = false;
-                        c.Visible = true;
+                        uc.Visible = true;
                     }
                 }
             }
