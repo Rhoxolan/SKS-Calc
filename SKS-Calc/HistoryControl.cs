@@ -83,7 +83,10 @@ namespace SKS_Calc
 
         private void buttonOutputSaveToTxt_Click(object sender, EventArgs e)
         {
-            configurations[listBoxConfigurationsList.SelectedIndex].SaveToTXT();
+            if (listBoxConfigurationsList.SelectedIndex != -1)
+            {
+                configurations[listBoxConfigurationsList.SelectedIndex].SaveToTXT();
+            }
         }
     }
 }
