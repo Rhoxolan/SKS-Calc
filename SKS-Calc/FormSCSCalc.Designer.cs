@@ -37,6 +37,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(526, 596);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormSCSCalc";
             this.Text = "SCS-Calc";
             this.Load += new System.EventHandler(this.FormSCSCalc_Load);
