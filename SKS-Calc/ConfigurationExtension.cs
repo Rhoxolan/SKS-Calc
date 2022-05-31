@@ -5,6 +5,8 @@
     //Создание методов в этом классе не регламентировано, методы создаются по мере необходимости.
     public static class ConfigurationExtension
     {
+        //Используется для вывода конфигурации СКС в блоке вывода режима "История"
+        //Рекомендовано для вывода конфигурации СКС в других режимах
         public static string ToLongOutputString(this Configuration configuration)
         {
             if (configuration.СableQuantity != null && configuration.HankQuantity != null)
@@ -47,6 +49,7 @@
             }
         }
 
+        //Ремомендовано для записи конфигурации СКС в текстовые документы
         public static string ToLongSaveString(this Configuration configuration)
         {
             if (configuration.СableQuantity != null && configuration.HankQuantity != null)
