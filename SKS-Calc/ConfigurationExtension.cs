@@ -85,7 +85,7 @@
                 return
                     $"Конфигурация создана в приложении SCS-Calc{Environment.NewLine}{Environment.NewLine}" +
                     $"Дата записи конфигурации: {configuration.RecordTime.ToString()}{Environment.NewLine}" +
-                    $"Наименьшая длина постоянного линка (Permament Link):" +
+                    $"Наименьшая длина постоянного линка (Permament Link): " +
                     $"{configuration.MinPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
                     $"Наибольшая длина постоянного линка (Permament Link): " +
                     $"{configuration.MaxPermamentLink.ToString("F" + 2)} м.{Environment.NewLine}" +
