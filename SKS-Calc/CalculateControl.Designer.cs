@@ -256,7 +256,7 @@
             this.numericUpDownCableHankMeterage.DecimalPlaces = 2;
             this.numericUpDownCableHankMeterage.Location = new System.Drawing.Point(3, 204);
             this.numericUpDownCableHankMeterage.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
