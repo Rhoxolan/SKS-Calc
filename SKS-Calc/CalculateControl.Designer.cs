@@ -290,7 +290,7 @@
             // 
             this.buttonCalculate.Location = new System.Drawing.Point(3, 233);
             this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(107, 23);
+            this.buttonCalculate.Size = new System.Drawing.Size(105, 23);
             this.buttonCalculate.TabIndex = 13;
             this.buttonCalculate.Text = "Рассчитать";
             this.toolTipHelp.SetToolTip(this.buttonCalculate, "Рассчитать конфигурацию. Расчёт будет автоматически сохранен в истории расчётов.\r" +
@@ -327,7 +327,7 @@
             this.groupBoxOutput.Controls.Add(this.labelOutputMinPermamentLink);
             this.groupBoxOutput.Location = new System.Drawing.Point(3, 262);
             this.groupBoxOutput.Name = "groupBoxOutput";
-            this.groupBoxOutput.Size = new System.Drawing.Size(511, 316);
+            this.groupBoxOutput.Size = new System.Drawing.Size(508, 316);
             this.groupBoxOutput.TabIndex = 14;
             this.groupBoxOutput.TabStop = false;
             this.groupBoxOutput.Text = "Вывод";
@@ -586,9 +586,9 @@
             // 
             // buttonInfo
             // 
-            this.buttonInfo.Location = new System.Drawing.Point(407, 233);
+            this.buttonInfo.Location = new System.Drawing.Point(406, 233);
             this.buttonInfo.Name = "buttonInfo";
-            this.buttonInfo.Size = new System.Drawing.Size(107, 23);
+            this.buttonInfo.Size = new System.Drawing.Size(105, 23);
             this.buttonInfo.TabIndex = 15;
             this.buttonInfo.Text = "Информация";
             this.toolTipHelp.SetToolTip(this.buttonInfo, "Просмотреть информацию о приложении и получить помощь в работе с приложением");
@@ -597,9 +597,9 @@
             // 
             // buttonHistory
             // 
-            this.buttonHistory.Location = new System.Drawing.Point(296, 233);
+            this.buttonHistory.Location = new System.Drawing.Point(295, 233);
             this.buttonHistory.Name = "buttonHistory";
-            this.buttonHistory.Size = new System.Drawing.Size(107, 23);
+            this.buttonHistory.Size = new System.Drawing.Size(105, 23);
             this.buttonHistory.TabIndex = 16;
             this.buttonHistory.Text = "История";
             this.toolTipHelp.SetToolTip(this.buttonHistory, "Просмотреть историю расчётов конфигураций. В режиме истории вы сможете просматрив" +
@@ -635,7 +635,7 @@
             this.Controls.Add(this.numericUpDownMinPermamentLink);
             this.Controls.Add(this.labelMinPermamentLink);
             this.Name = "CalculateControl";
-            this.Size = new System.Drawing.Size(516, 585);
+            this.Size = new System.Drawing.Size(514, 585);
             this.Load += new System.EventHandler(this.CalculateControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).EndInit();

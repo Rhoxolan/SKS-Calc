@@ -44,13 +44,13 @@
             this.listBoxConfigurationsList.ItemHeight = 15;
             this.listBoxConfigurationsList.Location = new System.Drawing.Point(3, 3);
             this.listBoxConfigurationsList.Name = "listBoxConfigurationsList";
-            this.listBoxConfigurationsList.Size = new System.Drawing.Size(397, 259);
+            this.listBoxConfigurationsList.Size = new System.Drawing.Size(395, 259);
             this.listBoxConfigurationsList.TabIndex = 0;
             this.listBoxConfigurationsList.SelectedIndexChanged += new System.EventHandler(this.listBoxConfigurationsList_SelectedIndexChanged);
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(406, 32);
+            this.buttonDelete.Location = new System.Drawing.Point(404, 32);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(107, 23);
             this.buttonDelete.TabIndex = 17;
@@ -61,7 +61,7 @@
             // 
             // buttonRemoveAll
             // 
-            this.buttonRemoveAll.Location = new System.Drawing.Point(406, 61);
+            this.buttonRemoveAll.Location = new System.Drawing.Point(404, 61);
             this.buttonRemoveAll.Name = "buttonRemoveAll";
             this.buttonRemoveAll.Size = new System.Drawing.Size(107, 23);
             this.buttonRemoveAll.TabIndex = 18;
@@ -72,7 +72,7 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(406, 239);
+            this.buttonBack.Location = new System.Drawing.Point(404, 240);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(107, 23);
             this.buttonBack.TabIndex = 19;
@@ -88,12 +88,12 @@
             this.textBoxShowConfigurationDetails.Multiline = true;
             this.textBoxShowConfigurationDetails.Name = "textBoxShowConfigurationDetails";
             this.textBoxShowConfigurationDetails.ReadOnly = true;
-            this.textBoxShowConfigurationDetails.Size = new System.Drawing.Size(510, 313);
+            this.textBoxShowConfigurationDetails.Size = new System.Drawing.Size(508, 313);
             this.textBoxShowConfigurationDetails.TabIndex = 20;
             // 
             // buttonOutputSaveToTxt
             // 
-            this.buttonOutputSaveToTxt.Location = new System.Drawing.Point(406, 3);
+            this.buttonOutputSaveToTxt.Location = new System.Drawing.Point(404, 3);
             this.buttonOutputSaveToTxt.Name = "buttonOutputSaveToTxt";
             this.buttonOutputSaveToTxt.Size = new System.Drawing.Size(107, 23);
             this.buttonOutputSaveToTxt.TabIndex = 21;
@@ -118,7 +118,7 @@
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.listBoxConfigurationsList);
             this.Name = "HistoryControl";
-            this.Size = new System.Drawing.Size(516, 585);
+            this.Size = new System.Drawing.Size(514, 585);
             this.ResumeLayout(false);
             this.PerformLayout();
 
