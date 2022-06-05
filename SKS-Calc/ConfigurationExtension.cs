@@ -106,7 +106,8 @@
             SaveFileDialog sfd = new();
             sfd.Filter = "Текстовые документы(*.txt)|*.txt";
             sfd.FileName = $"Конфигурация СКС {configuration.RecordTime.ToShortDateString()} " +
-                $"{configuration.RecordTime.ToLongTimeString()}.txt";
+                $"{configuration.RecordTime.Hour:00}.{configuration.RecordTime.Minute:00}." +
+                $"{configuration.RecordTime.Second:00}.txt";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 FileStream fs = new(sfd.FileName, FileMode.Create);
