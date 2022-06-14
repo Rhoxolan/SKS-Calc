@@ -21,8 +21,8 @@ namespace SKS_Calc
             this.docPath = docPath;
             this.Load += OutputBlockCleaner; //Устанавливаем начальное отображение блока вывода
             buttonCalculate.Click += Saver; //Добавляем обработчик для сохранения данных списка конфигураций
-            numericUpDownMinPermamentLink.ValueChanged += OutputBlockCleaner; //Очищаем блок вывода при любых изменениях
-            numericUpDownMaxPermamentLink.ValueChanged += OutputBlockCleaner;
+            numericUpDownMinPermanentLink.ValueChanged += OutputBlockCleaner; //Очищаем блок вывода при любых изменениях
+            numericUpDownMaxPermanentLink.ValueChanged += OutputBlockCleaner;
             numericUpDownNumberOfWorkplaces.ValueChanged += OutputBlockCleaner;
             numericUpDownNumberOfPorts.ValueChanged += OutputBlockCleaner;
             checkBoxCableHankMeterage.CheckedChanged += OutputBlockCleaner;
@@ -82,8 +82,8 @@ namespace SKS_Calc
             if (checkBoxCableHankMeterage.Checked)
             {
                 double TechnologicalReserve = 1.10; //Коэффициент технологического запаса
-                double MinPermamentLink = (double)numericUpDownMinPermamentLink.Value;
-                double MaxPermamentLink = (double)numericUpDownMaxPermamentLink.Value;
+                double MinPermamentLink = (double)numericUpDownMinPermanentLink.Value;
+                double MaxPermamentLink = (double)numericUpDownMaxPermanentLink.Value;
                 double AveragePermamentLink = (MinPermamentLink + MaxPermamentLink) / 2 * TechnologicalReserve;
                 int NumberOfWorkplaces = (int)numericUpDownNumberOfWorkplaces.Value;
                 int NumberOfPorts = (int)numericUpDownNumberOfPorts.Value;
@@ -102,9 +102,9 @@ namespace SKS_Calc
                 double TotalСableQuantity = HankQuantity * CableHankMeterage;
                 configurations.Add(new(DateTime.Now, MinPermamentLink, MaxPermamentLink, AveragePermamentLink,
                     NumberOfWorkplaces, NumberOfPorts, СableQuantity, CableHankMeterage, HankQuantity, TotalСableQuantity));
-                textBoxOutputMinPermamentLink.Text = MinPermamentLink.ToString("F" + 2);
-                textBoxOutputMaxPermamentLink.Text = MaxPermamentLink.ToString("F" + 2);
-                textBoxOutputAveragePermamentLink.Text = AveragePermamentLink.ToString("F" + 2);
+                textBoxOutputMinPermanentLink.Text = MinPermamentLink.ToString("F" + 2);
+                textBoxOutputMaxPermanentLink.Text = MaxPermamentLink.ToString("F" + 2);
+                textBoxOutputAveragePermanentLink.Text = AveragePermamentLink.ToString("F" + 2);
                 textBoxOutputNumberOfWorkplaces.Text = NumberOfWorkplaces.ToString();
                 textBoxOutputNumberOfPorts.Text = NumberOfPorts.ToString();
                 textBoxOutputСableQuantity.Text = СableQuantity.ToString("F" + 2);
@@ -115,17 +115,17 @@ namespace SKS_Calc
             else
             {
                 double TechnologicalReserve = 1.10; //Коэффициент технологического запаса
-                double MinPermamentLink = (double)numericUpDownMinPermamentLink.Value;
-                double MaxPermamentLink = (double)numericUpDownMaxPermamentLink.Value;
+                double MinPermamentLink = (double)numericUpDownMinPermanentLink.Value;
+                double MaxPermamentLink = (double)numericUpDownMaxPermanentLink.Value;
                 double AveragePermamentLink = (MinPermamentLink + MaxPermamentLink) / 2 * TechnologicalReserve;
                 int NumberOfWorkplaces = (int)numericUpDownNumberOfWorkplaces.Value;
                 int NumberOfPorts = (int)numericUpDownNumberOfPorts.Value;
                 double TotalСableQuantity = AveragePermamentLink * NumberOfWorkplaces * NumberOfPorts;
                 configurations.Add(new(DateTime.Now, MinPermamentLink, MaxPermamentLink, AveragePermamentLink,
                     NumberOfWorkplaces, NumberOfPorts, null, null, null, TotalСableQuantity));
-                textBoxOutputMinPermamentLink.Text = MinPermamentLink.ToString("F" + 2);
-                textBoxOutputMaxPermamentLink.Text = MaxPermamentLink.ToString("F" + 2);
-                textBoxOutputAveragePermamentLink.Text = AveragePermamentLink.ToString("F" + 2);
+                textBoxOutputMinPermanentLink.Text = MinPermamentLink.ToString("F" + 2);
+                textBoxOutputMaxPermanentLink.Text = MaxPermamentLink.ToString("F" + 2);
+                textBoxOutputAveragePermanentLink.Text = AveragePermamentLink.ToString("F" + 2);
                 textBoxOutputNumberOfWorkplaces.Text = NumberOfWorkplaces.ToString();
                 textBoxOutputNumberOfPorts.Text = NumberOfPorts.ToString();
                 textBoxOutputTotalСableQuantity.Text = TotalСableQuantity.ToString("F" + 2);
@@ -140,9 +140,9 @@ namespace SKS_Calc
 
         private void OutputBlockCleaner(object? sender, EventArgs e) //Обработчик для очистки блока вывода
         {
-            textBoxOutputMinPermamentLink.Text = string.Empty;
-            textBoxOutputMaxPermamentLink.Text = string.Empty;
-            textBoxOutputAveragePermamentLink.Text = string.Empty;
+            textBoxOutputMinPermanentLink.Text = string.Empty;
+            textBoxOutputMaxPermanentLink.Text = string.Empty;
+            textBoxOutputAveragePermanentLink.Text = string.Empty;
             textBoxOutputNumberOfWorkplaces.Text = string.Empty;
             textBoxOutputNumberOfPorts.Text = string.Empty;
             textBoxOutputСableQuantity.Text = string.Empty;

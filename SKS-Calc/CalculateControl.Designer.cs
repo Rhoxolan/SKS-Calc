@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculateControl));
-            this.labelMinPermamentLink = new System.Windows.Forms.Label();
-            this.numericUpDownMinPermamentLink = new System.Windows.Forms.NumericUpDown();
-            this.labelMaxPermamentLink = new System.Windows.Forms.Label();
-            this.numericUpDownMaxPermamentLink = new System.Windows.Forms.NumericUpDown();
+            this.labelMinPermanentLink = new System.Windows.Forms.Label();
+            this.numericUpDownMinPermanentLink = new System.Windows.Forms.NumericUpDown();
+            this.labelMaxPermanentLink = new System.Windows.Forms.Label();
+            this.numericUpDownMaxPermanentLink = new System.Windows.Forms.NumericUpDown();
             this.labelNumberOfWorkplaces = new System.Windows.Forms.Label();
             this.numericUpDownNumberOfWorkplaces = new System.Windows.Forms.NumericUpDown();
             this.labelNumberOfPorts = new System.Windows.Forms.Label();
@@ -61,89 +61,89 @@
             this.textBoxOutputСableQuantity = new System.Windows.Forms.TextBox();
             this.labelOutputNumberOfPorts = new System.Windows.Forms.Label();
             this.textBoxOutputNumberOfPorts = new System.Windows.Forms.TextBox();
-            this.labelOutputAveragePermamentLink = new System.Windows.Forms.Label();
+            this.labelOutputAveragePermanentLink = new System.Windows.Forms.Label();
             this.labelMeters6 = new System.Windows.Forms.Label();
-            this.textBoxOutputAveragePermamentLink = new System.Windows.Forms.TextBox();
-            this.labelOutputMaxPermamentLink = new System.Windows.Forms.Label();
+            this.textBoxOutputAveragePermanentLink = new System.Windows.Forms.TextBox();
+            this.labelOutputMaxPermanentLink = new System.Windows.Forms.Label();
             this.labelMeters5 = new System.Windows.Forms.Label();
-            this.textBoxOutputMaxPermamentLink = new System.Windows.Forms.TextBox();
+            this.textBoxOutputMaxPermanentLink = new System.Windows.Forms.TextBox();
             this.labelMeters4 = new System.Windows.Forms.Label();
-            this.textBoxOutputMinPermamentLink = new System.Windows.Forms.TextBox();
-            this.labelOutputMinPermamentLink = new System.Windows.Forms.Label();
+            this.textBoxOutputMinPermanentLink = new System.Windows.Forms.TextBox();
+            this.labelOutputMinPermanentLink = new System.Windows.Forms.Label();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonHistory = new System.Windows.Forms.Button();
             this.toolTipHelp = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermanentLink)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermanentLink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfWorkplaces)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfPorts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCableHankMeterage)).BeginInit();
             this.groupBoxOutput.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelMinPermamentLink
+            // labelMinPermanentLink
             // 
-            this.labelMinPermamentLink.AutoSize = true;
-            this.labelMinPermamentLink.Location = new System.Drawing.Point(3, 0);
-            this.labelMinPermamentLink.Name = "labelMinPermamentLink";
-            this.labelMinPermamentLink.Size = new System.Drawing.Size(229, 15);
-            this.labelMinPermamentLink.TabIndex = 0;
-            this.labelMinPermamentLink.Text = "Наименьшая длина постоянного линка:";
-            this.toolTipHelp.SetToolTip(this.labelMinPermamentLink, resources.GetString("labelMinPermamentLink.ToolTip"));
+            this.labelMinPermanentLink.AutoSize = true;
+            this.labelMinPermanentLink.Location = new System.Drawing.Point(3, 0);
+            this.labelMinPermanentLink.Name = "labelMinPermanentLink";
+            this.labelMinPermanentLink.Size = new System.Drawing.Size(229, 15);
+            this.labelMinPermanentLink.TabIndex = 0;
+            this.labelMinPermanentLink.Text = "Наименьшая длина постоянного линка:";
+            this.toolTipHelp.SetToolTip(this.labelMinPermanentLink, resources.GetString("labelMinPermanentLink.ToolTip"));
             // 
-            // numericUpDownMinPermamentLink
+            // numericUpDownMinPermanentLink
             // 
-            this.numericUpDownMinPermamentLink.DecimalPlaces = 2;
-            this.numericUpDownMinPermamentLink.Location = new System.Drawing.Point(3, 18);
-            this.numericUpDownMinPermamentLink.Maximum = new decimal(new int[] {
+            this.numericUpDownMinPermanentLink.DecimalPlaces = 2;
+            this.numericUpDownMinPermanentLink.Location = new System.Drawing.Point(3, 18);
+            this.numericUpDownMinPermanentLink.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDownMinPermamentLink.Minimum = new decimal(new int[] {
+            this.numericUpDownMinPermanentLink.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            this.numericUpDownMinPermamentLink.Name = "numericUpDownMinPermamentLink";
-            this.numericUpDownMinPermamentLink.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDownMinPermamentLink.TabIndex = 1;
-            this.toolTipHelp.SetToolTip(this.numericUpDownMinPermamentLink, resources.GetString("numericUpDownMinPermamentLink.ToolTip"));
-            this.numericUpDownMinPermamentLink.Value = new decimal(new int[] {
+            this.numericUpDownMinPermanentLink.Name = "numericUpDownMinPermanentLink";
+            this.numericUpDownMinPermanentLink.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownMinPermanentLink.TabIndex = 1;
+            this.toolTipHelp.SetToolTip(this.numericUpDownMinPermanentLink, resources.GetString("numericUpDownMinPermanentLink.ToolTip"));
+            this.numericUpDownMinPermanentLink.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // labelMaxPermamentLink
+            // labelMaxPermanentLink
             // 
-            this.labelMaxPermamentLink.AutoSize = true;
-            this.labelMaxPermamentLink.Location = new System.Drawing.Point(3, 44);
-            this.labelMaxPermamentLink.Name = "labelMaxPermamentLink";
-            this.labelMaxPermamentLink.Size = new System.Drawing.Size(228, 15);
-            this.labelMaxPermamentLink.TabIndex = 2;
-            this.labelMaxPermamentLink.Text = "Наибольшая длина постоянного линка:";
-            this.toolTipHelp.SetToolTip(this.labelMaxPermamentLink, resources.GetString("labelMaxPermamentLink.ToolTip"));
+            this.labelMaxPermanentLink.AutoSize = true;
+            this.labelMaxPermanentLink.Location = new System.Drawing.Point(3, 44);
+            this.labelMaxPermanentLink.Name = "labelMaxPermanentLink";
+            this.labelMaxPermanentLink.Size = new System.Drawing.Size(228, 15);
+            this.labelMaxPermanentLink.TabIndex = 2;
+            this.labelMaxPermanentLink.Text = "Наибольшая длина постоянного линка:";
+            this.toolTipHelp.SetToolTip(this.labelMaxPermanentLink, resources.GetString("labelMaxPermanentLink.ToolTip"));
             // 
-            // numericUpDownMaxPermamentLink
+            // numericUpDownMaxPermanentLink
             // 
-            this.numericUpDownMaxPermamentLink.DecimalPlaces = 2;
-            this.numericUpDownMaxPermamentLink.Location = new System.Drawing.Point(3, 62);
-            this.numericUpDownMaxPermamentLink.Maximum = new decimal(new int[] {
+            this.numericUpDownMaxPermanentLink.DecimalPlaces = 2;
+            this.numericUpDownMaxPermanentLink.Location = new System.Drawing.Point(3, 62);
+            this.numericUpDownMaxPermanentLink.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDownMaxPermamentLink.Minimum = new decimal(new int[] {
+            this.numericUpDownMaxPermanentLink.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            this.numericUpDownMaxPermamentLink.Name = "numericUpDownMaxPermamentLink";
-            this.numericUpDownMaxPermamentLink.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDownMaxPermamentLink.TabIndex = 3;
-            this.toolTipHelp.SetToolTip(this.numericUpDownMaxPermamentLink, resources.GetString("numericUpDownMaxPermamentLink.ToolTip"));
-            this.numericUpDownMaxPermamentLink.Value = new decimal(new int[] {
+            this.numericUpDownMaxPermanentLink.Name = "numericUpDownMaxPermanentLink";
+            this.numericUpDownMaxPermanentLink.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownMaxPermanentLink.TabIndex = 3;
+            this.toolTipHelp.SetToolTip(this.numericUpDownMaxPermanentLink, resources.GetString("numericUpDownMaxPermanentLink.ToolTip"));
+            this.numericUpDownMaxPermanentLink.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -316,15 +316,15 @@
             this.groupBoxOutput.Controls.Add(this.textBoxOutputСableQuantity);
             this.groupBoxOutput.Controls.Add(this.labelOutputNumberOfPorts);
             this.groupBoxOutput.Controls.Add(this.textBoxOutputNumberOfPorts);
-            this.groupBoxOutput.Controls.Add(this.labelOutputAveragePermamentLink);
+            this.groupBoxOutput.Controls.Add(this.labelOutputAveragePermanentLink);
             this.groupBoxOutput.Controls.Add(this.labelMeters6);
-            this.groupBoxOutput.Controls.Add(this.textBoxOutputAveragePermamentLink);
-            this.groupBoxOutput.Controls.Add(this.labelOutputMaxPermamentLink);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputAveragePermanentLink);
+            this.groupBoxOutput.Controls.Add(this.labelOutputMaxPermanentLink);
             this.groupBoxOutput.Controls.Add(this.labelMeters5);
-            this.groupBoxOutput.Controls.Add(this.textBoxOutputMaxPermamentLink);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputMaxPermanentLink);
             this.groupBoxOutput.Controls.Add(this.labelMeters4);
-            this.groupBoxOutput.Controls.Add(this.textBoxOutputMinPermamentLink);
-            this.groupBoxOutput.Controls.Add(this.labelOutputMinPermamentLink);
+            this.groupBoxOutput.Controls.Add(this.textBoxOutputMinPermanentLink);
+            this.groupBoxOutput.Controls.Add(this.labelOutputMinPermanentLink);
             this.groupBoxOutput.Location = new System.Drawing.Point(3, 262);
             this.groupBoxOutput.Name = "groupBoxOutput";
             this.groupBoxOutput.Size = new System.Drawing.Size(508, 316);
@@ -497,15 +497,15 @@
             this.textBoxOutputNumberOfPorts.TabIndex = 16;
             this.toolTipHelp.SetToolTip(this.textBoxOutputNumberOfPorts, "Введённое вами количество портов на 1 рабочее место");
             // 
-            // labelOutputAveragePermamentLink
+            // labelOutputAveragePermanentLink
             // 
-            this.labelOutputAveragePermamentLink.AutoSize = true;
-            this.labelOutputAveragePermamentLink.Location = new System.Drawing.Point(7, 88);
-            this.labelOutputAveragePermamentLink.Name = "labelOutputAveragePermamentLink";
-            this.labelOutputAveragePermamentLink.Size = new System.Drawing.Size(300, 15);
-            this.labelOutputAveragePermamentLink.TabIndex = 15;
-            this.labelOutputAveragePermamentLink.Text = "Средняя длина постоянного линка (Permament Link):";
-            this.toolTipHelp.SetToolTip(this.labelOutputAveragePermamentLink, resources.GetString("labelOutputAveragePermamentLink.ToolTip"));
+            this.labelOutputAveragePermanentLink.AutoSize = true;
+            this.labelOutputAveragePermanentLink.Location = new System.Drawing.Point(7, 88);
+            this.labelOutputAveragePermanentLink.Name = "labelOutputAveragePermanentLink";
+            this.labelOutputAveragePermanentLink.Size = new System.Drawing.Size(296, 15);
+            this.labelOutputAveragePermanentLink.TabIndex = 15;
+            this.labelOutputAveragePermanentLink.Text = "Средняя длина постоянного линка (Permanent Link):";
+            this.toolTipHelp.SetToolTip(this.labelOutputAveragePermanentLink, resources.GetString("labelOutputAveragePermanentLink.ToolTip"));
             // 
             // labelMeters6
             // 
@@ -516,25 +516,25 @@
             this.labelMeters6.TabIndex = 14;
             this.labelMeters6.Text = "м.";
             // 
-            // textBoxOutputAveragePermamentLink
+            // textBoxOutputAveragePermanentLink
             // 
-            this.textBoxOutputAveragePermamentLink.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxOutputAveragePermamentLink.Location = new System.Drawing.Point(374, 80);
-            this.textBoxOutputAveragePermamentLink.Name = "textBoxOutputAveragePermamentLink";
-            this.textBoxOutputAveragePermamentLink.ReadOnly = true;
-            this.textBoxOutputAveragePermamentLink.Size = new System.Drawing.Size(100, 23);
-            this.textBoxOutputAveragePermamentLink.TabIndex = 13;
-            this.toolTipHelp.SetToolTip(this.textBoxOutputAveragePermamentLink, resources.GetString("textBoxOutputAveragePermamentLink.ToolTip"));
+            this.textBoxOutputAveragePermanentLink.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxOutputAveragePermanentLink.Location = new System.Drawing.Point(374, 80);
+            this.textBoxOutputAveragePermanentLink.Name = "textBoxOutputAveragePermanentLink";
+            this.textBoxOutputAveragePermanentLink.ReadOnly = true;
+            this.textBoxOutputAveragePermanentLink.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputAveragePermanentLink.TabIndex = 13;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputAveragePermanentLink, resources.GetString("textBoxOutputAveragePermanentLink.ToolTip"));
             // 
-            // labelOutputMaxPermamentLink
+            // labelOutputMaxPermanentLink
             // 
-            this.labelOutputMaxPermamentLink.AutoSize = true;
-            this.labelOutputMaxPermamentLink.Location = new System.Drawing.Point(7, 59);
-            this.labelOutputMaxPermamentLink.Name = "labelOutputMaxPermamentLink";
-            this.labelOutputMaxPermamentLink.Size = new System.Drawing.Size(326, 15);
-            this.labelOutputMaxPermamentLink.TabIndex = 12;
-            this.labelOutputMaxPermamentLink.Text = "Наибольшая длина постоянного линка (Permament Link):";
-            this.toolTipHelp.SetToolTip(this.labelOutputMaxPermamentLink, "Введённое вами значение наибольшей длины постоянного линка (Permament Link)");
+            this.labelOutputMaxPermanentLink.AutoSize = true;
+            this.labelOutputMaxPermanentLink.Location = new System.Drawing.Point(7, 59);
+            this.labelOutputMaxPermanentLink.Name = "labelOutputMaxPermanentLink";
+            this.labelOutputMaxPermanentLink.Size = new System.Drawing.Size(322, 15);
+            this.labelOutputMaxPermanentLink.TabIndex = 12;
+            this.labelOutputMaxPermanentLink.Text = "Наибольшая длина постоянного линка (Permanent Link):";
+            this.toolTipHelp.SetToolTip(this.labelOutputMaxPermanentLink, "Введённое вами значение наибольшей длины постоянного линка (Permanent Link)");
             // 
             // labelMeters5
             // 
@@ -545,15 +545,15 @@
             this.labelMeters5.TabIndex = 11;
             this.labelMeters5.Text = "м.";
             // 
-            // textBoxOutputMaxPermamentLink
+            // textBoxOutputMaxPermanentLink
             // 
-            this.textBoxOutputMaxPermamentLink.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxOutputMaxPermamentLink.Location = new System.Drawing.Point(374, 51);
-            this.textBoxOutputMaxPermamentLink.Name = "textBoxOutputMaxPermamentLink";
-            this.textBoxOutputMaxPermamentLink.ReadOnly = true;
-            this.textBoxOutputMaxPermamentLink.Size = new System.Drawing.Size(100, 23);
-            this.textBoxOutputMaxPermamentLink.TabIndex = 10;
-            this.toolTipHelp.SetToolTip(this.textBoxOutputMaxPermamentLink, "Введённое вами значение наибольшей длины постоянного линка (Permament Link)");
+            this.textBoxOutputMaxPermanentLink.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxOutputMaxPermanentLink.Location = new System.Drawing.Point(374, 51);
+            this.textBoxOutputMaxPermanentLink.Name = "textBoxOutputMaxPermanentLink";
+            this.textBoxOutputMaxPermanentLink.ReadOnly = true;
+            this.textBoxOutputMaxPermanentLink.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputMaxPermanentLink.TabIndex = 10;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputMaxPermanentLink, "Введённое вами значение наибольшей длины постоянного линка (Permanent Link)");
             // 
             // labelMeters4
             // 
@@ -564,25 +564,25 @@
             this.labelMeters4.TabIndex = 9;
             this.labelMeters4.Text = "м.";
             // 
-            // textBoxOutputMinPermamentLink
+            // textBoxOutputMinPermanentLink
             // 
-            this.textBoxOutputMinPermamentLink.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxOutputMinPermamentLink.Location = new System.Drawing.Point(374, 22);
-            this.textBoxOutputMinPermamentLink.Name = "textBoxOutputMinPermamentLink";
-            this.textBoxOutputMinPermamentLink.ReadOnly = true;
-            this.textBoxOutputMinPermamentLink.Size = new System.Drawing.Size(100, 23);
-            this.textBoxOutputMinPermamentLink.TabIndex = 2;
-            this.toolTipHelp.SetToolTip(this.textBoxOutputMinPermamentLink, "Введённое вами значение наименьшей длины постоянного линка (Permament Link)");
+            this.textBoxOutputMinPermanentLink.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxOutputMinPermanentLink.Location = new System.Drawing.Point(374, 22);
+            this.textBoxOutputMinPermanentLink.Name = "textBoxOutputMinPermanentLink";
+            this.textBoxOutputMinPermanentLink.ReadOnly = true;
+            this.textBoxOutputMinPermanentLink.Size = new System.Drawing.Size(100, 23);
+            this.textBoxOutputMinPermanentLink.TabIndex = 2;
+            this.toolTipHelp.SetToolTip(this.textBoxOutputMinPermanentLink, "Введённое вами значение наименьшей длины постоянного линка (Permanent Link)");
             // 
-            // labelOutputMinPermamentLink
+            // labelOutputMinPermanentLink
             // 
-            this.labelOutputMinPermamentLink.AutoSize = true;
-            this.labelOutputMinPermamentLink.Location = new System.Drawing.Point(6, 30);
-            this.labelOutputMinPermamentLink.Name = "labelOutputMinPermamentLink";
-            this.labelOutputMinPermamentLink.Size = new System.Drawing.Size(327, 15);
-            this.labelOutputMinPermamentLink.TabIndex = 1;
-            this.labelOutputMinPermamentLink.Text = "Наименьшая длина постоянного линка (Permament Link):";
-            this.toolTipHelp.SetToolTip(this.labelOutputMinPermamentLink, "Введённое вами значение наименьшей длины постоянного линка (Permament Link)");
+            this.labelOutputMinPermanentLink.AutoSize = true;
+            this.labelOutputMinPermanentLink.Location = new System.Drawing.Point(6, 30);
+            this.labelOutputMinPermanentLink.Name = "labelOutputMinPermanentLink";
+            this.labelOutputMinPermanentLink.Size = new System.Drawing.Size(323, 15);
+            this.labelOutputMinPermanentLink.TabIndex = 1;
+            this.labelOutputMinPermanentLink.Text = "Наименьшая длина постоянного линка (Permanent Link):";
+            this.toolTipHelp.SetToolTip(this.labelOutputMinPermanentLink, "Введённое вами значение наименьшей длины постоянного линка (Permanent Link)");
             // 
             // buttonInfo
             // 
@@ -630,15 +630,15 @@
             this.Controls.Add(this.labelNumberOfPorts);
             this.Controls.Add(this.numericUpDownNumberOfWorkplaces);
             this.Controls.Add(this.labelNumberOfWorkplaces);
-            this.Controls.Add(this.numericUpDownMaxPermamentLink);
-            this.Controls.Add(this.labelMaxPermamentLink);
-            this.Controls.Add(this.numericUpDownMinPermamentLink);
-            this.Controls.Add(this.labelMinPermamentLink);
+            this.Controls.Add(this.numericUpDownMaxPermanentLink);
+            this.Controls.Add(this.labelMaxPermanentLink);
+            this.Controls.Add(this.numericUpDownMinPermanentLink);
+            this.Controls.Add(this.labelMinPermanentLink);
             this.Name = "CalculateControl";
             this.Size = new System.Drawing.Size(514, 585);
             this.Load += new System.EventHandler(this.CalculateControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermamentLink)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermamentLink)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinPermanentLink)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxPermanentLink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfWorkplaces)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumberOfPorts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCableHankMeterage)).EndInit();
@@ -651,10 +651,10 @@
 
         #endregion
 
-        private Label labelMinPermamentLink;
-        private NumericUpDown numericUpDownMinPermamentLink;
-        private Label labelMaxPermamentLink;
-        private NumericUpDown numericUpDownMaxPermamentLink;
+        private Label labelMinPermanentLink;
+        private NumericUpDown numericUpDownMinPermanentLink;
+        private Label labelMaxPermanentLink;
+        private NumericUpDown numericUpDownMaxPermanentLink;
         private Label labelNumberOfWorkplaces;
         private NumericUpDown numericUpDownNumberOfWorkplaces;
         private Label labelNumberOfPorts;
@@ -667,14 +667,14 @@
         private Button buttonCalculate;
         private GroupBox groupBoxOutput;
         private Label labelMeters4;
-        private TextBox textBoxOutputMinPermamentLink;
-        private Label labelOutputMinPermamentLink;
-        private Label labelOutputAveragePermamentLink;
+        private TextBox textBoxOutputMinPermanentLink;
+        private Label labelOutputMinPermanentLink;
+        private Label labelOutputAveragePermanentLink;
         private Label labelMeters6;
-        private TextBox textBoxOutputAveragePermamentLink;
-        private Label labelOutputMaxPermamentLink;
+        private TextBox textBoxOutputAveragePermanentLink;
+        private Label labelOutputMaxPermanentLink;
         private Label labelMeters5;
-        private TextBox textBoxOutputMaxPermamentLink;
+        private TextBox textBoxOutputMaxPermanentLink;
         private Label labelOutputNumberOfPorts;
         private TextBox textBoxOutputNumberOfPorts;
         private Button buttonOutputSaveToTxt;

@@ -60,20 +60,20 @@
   <metadata name="toolTipHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="labelMinPermamentLink.ToolTip" xml:space="preserve">
+  <data name="labelMinPermanentLink.ToolTip" xml:space="preserve">
     <value>Пожалуйста, введите значение наименьшей длины постоянного линка (Permament Link) в метрах.
 Напоминаем, что согласно стандарту ISO/IEC 11801, длина постоянного линка не должна превышать 90 м, длина канала (Channel) не должна превышать 100 м.
 </value>
   </data>
-  <data name="numericUpDownMinPermamentLink.ToolTip" xml:space="preserve">
+  <data name="numericUpDownMinPermanentLink.ToolTip" xml:space="preserve">
     <value>Пожалуйста, введите значение наименьшей длины постоянного линка (Permament Link) в метрах.
 Напоминаем, что согласно стандарту ISO/IEC 11801, длина постоянного линка не должна превышать 90 м, длина канала (Channel) не должна превышать 100 м.</value>
   </data>
-  <data name="labelMaxPermamentLink.ToolTip" xml:space="preserve">
+  <data name="labelMaxPermanentLink.ToolTip" xml:space="preserve">
     <value>Пожалуйста, введите значение наибольшей длины постоянного линка (Permament Link) в метрах.
 Напоминаем, что согласно стандарту ISO/IEC 11801, длина постоянного линка не должна превышать 90 м, длина канала (Channel) не должна превышать 100 м.</value>
   </data>
-  <data name="numericUpDownMaxPermamentLink.ToolTip" xml:space="preserve">
+  <data name="numericUpDownMaxPermanentLink.ToolTip" xml:space="preserve">
     <value>Пожалуйста, введите значение наибольшей длины постоянного линка (Permament Link) в метрах.
 Напоминаем, что согласно стандарту ISO/IEC 11801, длина постоянного линка не должна превышать 90 м, длина канала (Channel) не должна превышать 100 м.</value>
   </data>
@@ -89,13 +89,13 @@
 учета метража кабеля в бухтах. Если метраж кабеля в бухта указан,  расчёт  производится
 с учетом количества кабельных пробросов, которые можно сделать с 1-й бухты</value>
   </data>
-  <data name="labelOutputAveragePermamentLink.ToolTip" xml:space="preserve">
+  <data name="labelOutputAveragePermanentLink.ToolTip" xml:space="preserve">
     <value>Средняя длина постоянного линка (Permament Link). Рассчитывается исходя из среднего значения
 минимальной и максимальной длины постоянного линка с учетом коэффициента технологического
 запаса, принятого в значении 1.10</value>
   </data>
-  <data name="textBoxOutputAveragePermamentLink.ToolTip" xml:space="preserve">
-    <value>Средняя длина постоянного линка (Permament Link). Рассчитывается исходя из среднего значения
+  <data name="textBoxOutputAveragePermanentLink.ToolTip" xml:space="preserve">
+    <value>Средняя длина постоянного линка (Permanent Link). Рассчитывается исходя из среднего значения
 минимальной и максимальной длины постоянного линка с учетом коэффициента технологического
 запаса, принятого в значении 1.10</value>
   </data>
